@@ -1,0 +1,29 @@
+{
+  "name": "mallstalgia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "concurrently \"nodemon server.js\" \"cd client && npm run start\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MKnoles78/mallstalgia.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MKnoles78/mallstalgia/issues"
+  },
+  "homepage": "https://github.com/MKnoles78/mallstalgia#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0"
+  }
+}
