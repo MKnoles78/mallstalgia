@@ -4,7 +4,7 @@ import Home from "./containers/Home";
 import Foodcourt from "./containers/Foodcourt";
 import Looks from "./containers/Looks";
 import Register from "./containers/Register";
-import Signup from "./containers/Signup";
+import Login from "./containers/Login";
 import Retailer from "./containers/Retailer";
 import NavBar from "./components/NavBar/NavBar";
 import NotFound from "./containers/NotFound";
@@ -17,8 +17,8 @@ function App() {
       <Route exact path="/">
         <Home/>
       </Route>
-      <Route exact path="/signup">
-        <Signup/>
+      <Route exact path="/login">
+        <Login/>
       </Route>
       <Route exact path="/register">
         <Register/>
