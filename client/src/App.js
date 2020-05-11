@@ -4,7 +4,7 @@ import Home from "./containers/Home";
 import Foodcourt from "./containers/Foodcourt";
 import Looks from "./containers/Looks";
 import Register from "./containers/Register";
-import Signup from "./containers/Signup";
+import Login from "./containers/Login";
 import NavBar from "./components/NavBar/NavBar";
 
 function App() {
