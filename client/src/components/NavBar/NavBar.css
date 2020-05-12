@@ -2,5 +2,16 @@
     background-color: #3e75cc!important;
 }
 
+.nav-link {
+    color: #d9f28b!important;
+}
+
+#navbarNav {
+    justify-content: flex-end;
+    margin-right: 4rem;
+}
+
+
+
 
 
