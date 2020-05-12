@@ -10,5 +10,15 @@ body, html {
     background: url(../images/main.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
-
 }
+
+.container {
+    display: block;
+    width: 100;
+    padding-top: 200px;
+}
+
+.card {
+    background-color:#3e75cc;
+}
+
