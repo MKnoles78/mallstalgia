@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import "./Retailer.css";
+
+
 
 class Retailer extends Component {
 
@@ -6,7 +9,7 @@ class Retailer extends Component {
     
     render() {
         return (
-            <div>
+            <div id="retailer-background">
                 
             </div>
         );

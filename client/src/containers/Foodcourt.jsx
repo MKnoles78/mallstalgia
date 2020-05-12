@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./Foodcourt.css";
 
 class Foodcourt extends Component {
 
@@ -6,9 +7,11 @@ class Foodcourt extends Component {
     
     render() {
         return (
-            <div>
-                
+
+            <div className="foodcourt-background">
+            <h1> hello </h1>
             </div>
+        
         );
     }
 }
