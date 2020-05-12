@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./Looks.css";
 
 class Looks extends Component {
 
@@ -6,7 +7,7 @@ class Looks extends Component {
     
     render() {
         return (
-            <div>
+            <div id="looks-background">
                 
             </div>
         );

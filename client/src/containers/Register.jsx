@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import "./Register.css";
+
 
 class Register extends Component {
 
@@ -6,7 +8,7 @@ class Register extends Component {
     
     render() {
         return (
-            <div>
+            <div id="register-background">
                 
             </div>
         );
