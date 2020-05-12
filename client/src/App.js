@@ -5,10 +5,7 @@ import Foodcourt from "./containers/Foodcourt";
 import Looks from "./containers/Looks";
 import Register from "./containers/Register";
 import Login from "./containers/Login";
-<<<<<<< HEAD
-=======
 import Retailer from "./containers/Retailer";
->>>>>>> c764d13dae9fe6fdf6fbb9ff44244764e9d29eae
 import NavBar from "./components/NavBar/NavBar";
 import NotFound from "./containers/NotFound";
 
