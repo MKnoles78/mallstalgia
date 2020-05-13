@@ -11,6 +11,7 @@ import NotFound from "./containers/NotFound";
 
 function App() {
   return <>
+  <div container id="main-background">
   <BrowserRouter>
     <NavBar />
     <Switch>
@@ -37,7 +38,9 @@ function App() {
       </Route>
     </Switch>
   </BrowserRouter>
+  </div>
   </>
+  
  
 }
 
