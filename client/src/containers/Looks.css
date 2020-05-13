@@ -10,5 +10,6 @@ body, html {
     background: url(../images/main.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
+    opacity: .3;
 
 }
