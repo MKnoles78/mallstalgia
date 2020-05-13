@@ -4,7 +4,9 @@ import "./Register.css";
 
 class Register extends Component {
 
-    state = {};
+    state = {
+        
+    };
     
     render() {
         return (
