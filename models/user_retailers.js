@@ -17,13 +17,6 @@ module.exports = function (sequelize, DataTypes) {
     },
   });
 
-  Retailers.associate = function (models) {
-    Retailer.belongsTo(User, {
-      as: "store_id",
-      through: "user_table",
-      foreignKey: "user_id",
-    });
-}
-
   return Retailers;
+  
 };
