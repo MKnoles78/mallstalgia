@@ -4,13 +4,15 @@ import "./Register.css";
 
 class Register extends Component {
 
-    state = {};
+    state = {
+        email: "",
+        password: ""
+    };
     
     render() {
         return (
-            <div id="register-background">
-                
-            </div>
+            <>
+            </>
         );
     }
 }
