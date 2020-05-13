@@ -8,7 +8,7 @@ class Foodcourt extends Component {
     render() {
         return (
 
-            <div className="foodcourt-background">
+            <div>
     
             </div>
         
