@@ -9,7 +9,7 @@ class Foodcourt extends Component {
         return (
 
             <div className="foodcourt-background">
-            <h1> hello </h1>
+    
             </div>
         
         );
