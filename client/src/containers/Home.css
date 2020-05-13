@@ -3,11 +3,9 @@ body, html {
     width: 100%;
     background: url(../images/main.jpeg);
     background-repeat: no-repeat;
-    background-size: auto;
-    
+    background-size: auto;  
     
 }
-
 
 #logo {
     position: sticky;
