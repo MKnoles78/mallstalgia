@@ -2,12 +2,9 @@
     background-color: #3e75cc!important;
 }
 
-/* .nav-link  {
-    color: #d9f28b!important;
-} */
-
 #navLink {
     color: #d9f28b;
+}
 
 #navbarNav {
     justify-content: flex-end;
