@@ -24,25 +24,18 @@ class Login extends Component {
                 />
                 <div className="card-body">
                   <form>
-                    <div className="form-group" id="login-background">
-                      <label for="exampleInputEmail1">Username</label>
+                    <div className="form-group" id="username">
+                      <label for="username">Username</label>
                       <input
-                        type="text"
+                        type="username"
                         className="form-control"
-                        id="exampleInputEmail1"
-                        aria-describedby="emailHelp"
                       />
-                      <small
-                        id="emailHelp"
-                        className="form-text text-muted"
-                      ></small>
                     </div>
                     <div className="form-group">
-                      <label for="exampleInputPassword1">Password</label>
+                      <label for="password">Password</label>
                       <input
                         type="password"
                         className="form-control"
-                        id="exampleInputPassword1"
                       />
                     </div>
                     <button type="submit" className="btn btn-primary">

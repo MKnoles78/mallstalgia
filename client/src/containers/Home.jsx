@@ -9,15 +9,13 @@ class Home extends Component {
 
     render() {
         return (
-            <>
+        
             <div className="home-background">
-            <div class="card"/>
-            <img src={logo} className="card-img-top" alt="MallStalgia logo" id="logo"/>
-            <div class="card-body"/>
+                <div className="logo">
+                <img src={logo} className="logo" alt="MallStalgia logo" id="logo"/>  
+                </div>
             </div>
-            </>
         );
-    
     }
 }
 
