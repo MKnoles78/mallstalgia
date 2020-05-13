@@ -11,7 +11,6 @@ class Login extends Component {
   render() {
     return (
       <>
-      <div container>
         <div className="container">
           <div className="row">
             <div className="col-sm-4"></div>
@@ -47,7 +46,6 @@ class Login extends Component {
             </div>
             <div className="col-sm-4"></div>
           </div>
-        </div>
         </div>
       </>
     );
