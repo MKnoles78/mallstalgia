@@ -1,10 +1,40 @@
 import React, { Component } from "react";
 import "./Register.css";
+import Form from "../components/Register/Form";
 
 class Register extends Component {
-  state = {
-    email: "",
-    password: "",
+
+  handleInputChange = (event) => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value,
+    });
+  };
+
+  handleSubmit = (
+    event,
+    firstName,
+    lastName,
+    email,
+    username,
+    password,
+    zipCode
+  ) => {
+    event.preventDefault();
+    console.log(
+      "first name " +
+        firstName +
+        " last name " +
+        lastName +
+        " email " +
+        email +
+        " username " +
+        username +
+        " password " +
+        password +
+        " zip code " +
+        zipCode
+    );
   };
 
   render() {
@@ -16,32 +46,8 @@ class Register extends Component {
             <div className="col-sm-4">
               <div className="card">
                 <div className="card-body">
-                    <h3>Create an account</h3>
-                  <form>
-                    <div className="form-group" id="firstname">
-                      <label for="firstname">First Name</label>
-                      <input type="firstname" className="form-control" />
-                    </div>
-                    <div className="form-group" id="lastname">
-                      <label for="lastName">Last Name</label>
-                      <input type="lastname" className="form-control" />
-                    </div>
-                    <div className="form-group" id="username">
-                      <label for="username">Username</label>
-                      <input type="username" className="form-control" />
-                    </div>
-                    <div className="form-group">
-                      <label for="password">Password</label>
-                      <input type="password" className="form-control" />
-                    </div>
-                    <div className="form-group">
-                      <label for="zipcode">Zip Code</label>
-                      <input type="zipcode" className="form-control" />
-                    </div>
-                    <button type="submit" className="btn btn-primary">
-                      Submit
-                    </button>
-                  </form>
+                  <h3>Create an account</h3>
+                  <Form handleSubmit={this.handleSubmit} />
                 </div>
               </div>
             </div>

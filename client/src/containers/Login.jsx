@@ -1,11 +1,20 @@
 import React, { Component } from "react";
 import "./Login.css";
 import logo from "../images/LogoRound.png";
+import Form from "../components/Login/Form";
 
 class Login extends Component {
-  state = {
-    email: "",
-    password: "",
+
+  handleInputChange = (event) => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value,
+    });
+  };
+
+  handleSubmit = (event, username, password) => {
+    event.preventDefault();
+    console.log("username " + username + " password " + password);
   };
 
   render() {
@@ -22,25 +31,7 @@ class Login extends Component {
                   alt="MallStalgia logo"
                 />
                 <div className="card-body">
-                  <form>
-                    <div className="form-group" id="username">
-                      <label for="username">Username</label>
-                      <input
-                        type="username"
-                        className="form-control"
-                      />
-                    </div>
-                    <div className="form-group">
-                      <label for="password">Password</label>
-                      <input
-                        type="password"
-                        className="form-control"
-                      />
-                    </div>
-                    <button type="submit" className="btn btn-primary">
-                      Submit
-                    </button>
-                  </form>
+                  <Form handleSubmit={this.handleSubmit} />
                 </div>
               </div>
             </div>
