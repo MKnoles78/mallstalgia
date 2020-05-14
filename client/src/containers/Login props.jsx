@@ -4,10 +4,10 @@ import logo from "../images/LogoRound.png";
 import Form from "../components/Login/Form";
 
 class Login extends Component {
-  // state = {
-  //   username: "",
-  //   password: "",
-  // };
+  state = {
+    username: "",
+    password: "",
+  };
 
   handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -16,9 +16,9 @@ class Login extends Component {
     });
   };
 
-  handleSubmit = (event, username, password) => {
+  handleSubmit = (event) => {
     event.preventDefault();
-    console.log("username " + username + " password " + password);
+    console.log("username " + this.state.username + " password " + this.state.password);
   };
 
   render() {
@@ -36,9 +36,9 @@ class Login extends Component {
                 />
                 <div className="card-body">
                   <Form
-                    // username={this.state.username}
-                    // password={this.state.password}
-                    // handleInputChange={this.handleInputChange}
+                    username={this.state.username}
+                    password={this.state.password}
+                    handleInputChange={this.handleInputChange}
                     handleSubmit={this.handleSubmit}
                   />
                 </div>

@@ -1,20 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 
 const Form = (props) => {
-
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-
   return (
-    <form onSubmit={(e) => {props.handleSubmit(e, username, password)}}>
+    <form onSubmit={props.handleSubmit}>
       <div className="form-group">
         <label>Username</label>
         <input
           type="username"
           className="form-control"
           name="username"
-          value={username}
-          onChange={(e) => {setUsername(e.target.value)}}
+          value={props.username}
+          onChange={props.handleInputChange}
         />
       </div>
       <div className="form-group">
@@ -23,8 +19,8 @@ const Form = (props) => {
           type="password"
           className="form-control"
           name="password"
-          value={password}
-          onChange={(e) => {setPassword(e.target.value)}}
+          value={props.password}
+          onChange={props.handleInputChange}
         />
       </div>
       <button type="submit" className="btn btn-primary">
