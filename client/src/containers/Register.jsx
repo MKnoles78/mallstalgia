@@ -1,21 +1,40 @@
 import React, { Component } from "react";
 import "./Register.css";
+import Form from "../components/Register/Form";
 
 class Register extends Component {
-  state = {
-    // firstName: "",
-    // lastName: "",
-    // username: "",
-    email: "",
-    password: "",
-    // zipCode: "",
-  };
 
   handleInputChange = (event) => {
     const { name, value } = event.target;
     this.setState({
       [name]: value,
     });
+  };
+
+  handleSubmit = (
+    event,
+    firstName,
+    lastName,
+    email,
+    username,
+    password,
+    zipCode
+  ) => {
+    event.preventDefault();
+    console.log(
+      "first name " +
+        firstName +
+        " last name " +
+        lastName +
+        " email " +
+        email +
+        " username " +
+        username +
+        " password " +
+        password +
+        " zip code " +
+        zipCode
+    );
   };
 
   render() {
@@ -28,31 +47,7 @@ class Register extends Component {
               <div className="card">
                 <div className="card-body">
                   <h3>Create an account</h3>
-                  <form>
-                    <div className="form-group">
-                      <label>Email</label>
-                      <input
-                        type="email"
-                        className="form-control"
-                        name="email"
-                        value={this.state.email}
-                        onChange={this.handleInputChange}
-                      />
-                    </div>
-                    <div className="form-group">
-                      <label>Password</label>
-                      <input
-                        type="password"
-                        className="form-control"
-                        name="password"
-                        value={this.state.password}
-                        onChange={this.handleInputChange}
-                      />
-                    </div>
-                    <button type="submit" className="btn btn-primary">
-                      Submit
-                    </button>
-                  </form>
+                  <Form handleSubmit={this.handleSubmit} />
                 </div>
               </div>
             </div>

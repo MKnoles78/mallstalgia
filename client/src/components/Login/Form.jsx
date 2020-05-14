@@ -6,7 +6,7 @@ const Form = (props) => {
   const [password, setPassword] = useState("");
 
   return (
-    <form onSubmit={(e) => {props.handleSubmit(e, username, password)}}>
+    <form onSubmit={e => {props.handleSubmit(e, username, password)}}>
       <div className="form-group">
         <label>Username</label>
         <input
