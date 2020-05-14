@@ -26,7 +26,7 @@ const Form = (props) => {
         <input
           type="text"
           className="form-control"
-          name="lasstName"
+          name="lastName"
           value={lastName}
           onChange={(e) => {setLastName(e.target.value)}}
         />
