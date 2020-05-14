@@ -3,19 +3,16 @@ const router = express.Router();
 const db = require("../models");
 const jwt = require("jsonwebtoken");
 
-/**
- * Root POST route to create a new user.
- */
 router.post("/", (req, res) => {
-  const email = req.body.email ? req.body.email.trim() : "";
+  const username = req.body.username ? req.body.username.trim() : "";
   const password = req.body.password ? req.body.password.trim() : "";
 
-  if (email && password) {
-    db.User.create({ email, password })
+  if (username && password) {
+    db.User.create({ username, password })
       .then(async (newUser) => {
         const token = await jwt.sign(
           {
-            email: newUser.email,
+            username: newUser.username,
             id: newUser.id,
             exp: Math.floor(Date.now() / 1000) + 60 * 60,
           },
@@ -41,6 +38,34 @@ router.post("/", (req, res) => {
       message: "Please enter a valid username and password.",
     });
   }
+});
+
+router.put("/:id", (req, res) => {
+  console.log(req.body);
+  const { username, fname, lname, zipcode } = req.body;
+  const { id } = req.params;
+  db.User.update(
+    {
+      username: username,
+      fname: fname,
+      lname: lname,
+      zipcode:  zipcode,
+      imageURL: imageURL,
+    },
+    { where: { id: req.params.id } }
+  )
+    .then((rowsUpdated) => {
+      res.json({
+        success: true,
+        data: rowsUpdated,
+      });
+    })
+    .catch((err) => {
+      res.status(500).json({
+        success: false,
+        message: "Could not save user data.",
+      });
+    });
 });
 
 
