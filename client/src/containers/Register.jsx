@@ -3,9 +3,20 @@ import "./Register.css";
 
 class Register extends Component {
   state = {
+    // firstName: "",
+    // lastName: "",
+    // username: "",
     email: "",
     password: "",
+    // zipCode: "",
   };
+
+  handleInputChange = event => {
+    const {name, value} = event.target;
+    this.setState({
+      [name]: value,
+    })
+  }
 
   render() {
     return (
@@ -16,28 +27,78 @@ class Register extends Component {
             <div className="col-sm-4">
               <div className="card">
                 <div className="card-body">
-                    <h3>Create an account</h3>
+                  <h3>Create an account</h3>
                   <form>
-                    <div className="form-group" id="firstname">
-                      <label for="firstname">First Name</label>
-                      <input type="firstname" className="form-control" />
+                    <div className="form-group">
+                      <label>Email</label>
+                      <input
+                        type="email"
+                        className="form-control"
+                        name="email"
+                        value={this.state.email}
+                        onChange={this.handleInputChange}
+                      />
                     </div>
-                    <div className="form-group" id="lastname">
-                      <label for="lastName">Last Name</label>
-                      <input type="lastname" className="form-control" />
+                    <div className="form-group">
+                      <label>Password</label>
+                      <input
+                        type="password"
+                        className="form-control"
+                        name="password"
+                        value={this.state.password}
+                        onChange={this.handleInputChange}
+                      />
+                    </div>
+                    {/* <div className="form-group" id="lastname">
+                      <label>Last Name</label>
+                      <input
+                        type="lastName"
+                        className="form-control"
+                        name=""
+                        value={}
+                        onChange={}
+                      />
                     </div>
                     <div className="form-group" id="username">
-                      <label for="username">Username</label>
-                      <input type="username" className="form-control" />
+                      <label>Username</label>
+                      <input
+                        type="username"
+                        className="form-control"
+                        name=""
+                        value={}
+                        onChange={}
+                      />
                     </div>
                     <div className="form-group">
-                      <label for="password">Password</label>
-                      <input type="password" className="form-control" />
+                      <label>E-mail</label>
+                      <input
+                        type="email"
+                        className="form-control"
+                        name=""
+                        value={}
+                        onChange={}
+                      />
                     </div>
                     <div className="form-group">
-                      <label for="zipcode">Zip Code</label>
-                      <input type="zipcode" className="form-control" />
+                      <label>Password</label>
+                      <input
+                        type="password"
+                        className="form-control"
+                        name=""
+                        value={}
+                        onChange={}
+                      />
                     </div>
+                    <div className="form-group">
+                      <label>Zip Code</label>
+                      <input
+                        type="zipCode"
+                        className="form-control"
+                        name=""
+                        value={}
+                        onChange={}
+                      />
+                    </div> */}
                     <button type="submit" className="btn btn-primary">
                       Submit
                     </button>
