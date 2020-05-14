@@ -11,12 +11,12 @@ class Register extends Component {
     // zipCode: "",
   };
 
-  handleInputChange = event => {
-    const {name, value} = event.target;
+  handleInputChange = (event) => {
+    const { name, value } = event.target;
     this.setState({
       [name]: value,
-    })
-  }
+    });
+  };
 
   render() {
     return (

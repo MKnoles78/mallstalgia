@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./Login.css";
 import logo from "../images/LogoRound.png";
+import Form from "../components/Login/Form"
 
 class Login extends Component {
   state = {
@@ -14,6 +15,11 @@ class Login extends Component {
       [name]: value,
     });
   };
+
+handleSubmit = (event) => {
+  event.preventDefault();
+  console.log (this.state.username + " " + this.state.password)
+}
 
   render() {
     return (
@@ -29,31 +35,7 @@ class Login extends Component {
                   alt="MallStalgia logo"
                 />
                 <div className="card-body">
-                  <form>
-                    <div className="form-group">
-                      <label>Username</label>
-                      <input
-                        type="username"
-                        className="form-control"
-                        name="username"
-                        value={this.state.username}
-                        onChange={this.handleInputChange}
-                      />
-                    </div>
-                    <div className="form-group">
-                      <label>Password</label>
-                      <input
-                        type="password"
-                        className="form-control"
-                        name="password"
-                        value={this.state.password}
-                        onChange={this.handleInputChange}
-                      />
-                    </div>
-                    <button type="submit" className="btn btn-primary">
-                      Submit
-                    </button>
-                  </form>
+                  <Form username={this.state.username} password={this.state.password} handleInputChange={this.handleInputChange}/>
                 </div>
               </div>
             </div>
