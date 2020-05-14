@@ -4,10 +4,6 @@ import logo from "../images/LogoRound.png";
 import Form from "../components/Login/Form";
 
 class Login extends Component {
-  // state = {
-  //   username: "",
-  //   password: "",
-  // };
 
   handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -35,12 +31,7 @@ class Login extends Component {
                   alt="MallStalgia logo"
                 />
                 <div className="card-body">
-                  <Form
-                    // username={this.state.username}
-                    // password={this.state.password}
-                    // handleInputChange={this.handleInputChange}
-                    handleSubmit={this.handleSubmit}
-                  />
+                  <Form handleSubmit={this.handleSubmit} />
                 </div>
               </div>
             </div>
