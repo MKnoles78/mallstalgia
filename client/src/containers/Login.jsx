@@ -4,8 +4,15 @@ import logo from "../images/LogoRound.png";
 
 class Login extends Component {
   state = {
-    email: "",
+    username: "",
     password: "",
+  };
+
+  handleInputChange = (event) => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value,
+    });
   };
 
   render() {
@@ -23,18 +30,24 @@ class Login extends Component {
                 />
                 <div className="card-body">
                   <form>
-                    <div className="form-group" id="username">
-                      <label for="username">Username</label>
+                    <div className="form-group">
+                      <label>Username</label>
                       <input
                         type="username"
                         className="form-control"
+                        name="username"
+                        value={this.state.username}
+                        onChange={this.handleInputChange}
                       />
                     </div>
                     <div className="form-group">
-                      <label for="password">Password</label>
+                      <label>Password</label>
                       <input
                         type="password"
                         className="form-control"
+                        name="password"
+                        value={this.state.password}
+                        onChange={this.handleInputChange}
                       />
                     </div>
                     <button type="submit" className="btn btn-primary">
@@ -53,3 +66,4 @@ class Login extends Component {
 }
 
 export default Login;
+
