@@ -49,56 +49,6 @@ class Register extends Component {
                         onChange={this.handleInputChange}
                       />
                     </div>
-                    {/* <div className="form-group" id="lastname">
-                      <label>Last Name</label>
-                      <input
-                        type="lastName"
-                        className="form-control"
-                        name=""
-                        value={}
-                        onChange={}
-                      />
-                    </div>
-                    <div className="form-group" id="username">
-                      <label>Username</label>
-                      <input
-                        type="username"
-                        className="form-control"
-                        name=""
-                        value={}
-                        onChange={}
-                      />
-                    </div>
-                    <div className="form-group">
-                      <label>E-mail</label>
-                      <input
-                        type="email"
-                        className="form-control"
-                        name=""
-                        value={}
-                        onChange={}
-                      />
-                    </div>
-                    <div className="form-group">
-                      <label>Password</label>
-                      <input
-                        type="password"
-                        className="form-control"
-                        name=""
-                        value={}
-                        onChange={}
-                      />
-                    </div>
-                    <div className="form-group">
-                      <label>Zip Code</label>
-                      <input
-                        type="zipCode"
-                        className="form-control"
-                        name=""
-                        value={}
-                        onChange={}
-                      />
-                    </div> */}
                     <button type="submit" className="btn btn-primary">
                       Submit
                     </button>
