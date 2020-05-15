@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState}  from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Home from "./containers/Home";
 import Foodcourt from "./containers/Foodcourt";
@@ -9,9 +9,10 @@ import Retailer from "./containers/Retailer";
 import NavBar from "./components/NavBar/NavBar";
 import NotFound from "./containers/NotFound";
 
-
-
 function App() {
+
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   return <>
   <BrowserRouter>
     <NavBar />
