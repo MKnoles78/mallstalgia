@@ -1,5 +1,6 @@
 import React from 'react';
-import "./LooksTable.css"
+import "./LooksTable.css";
+import RetailerRow from './RetailerRow';
 
 const LooksTable = (props) => {
     return (
@@ -14,21 +15,25 @@ const LooksTable = (props) => {
             <tbody>
                 <tr className="table-primary">
                 <th scope="row">1</th>
-                <td>Retailer</td>
+                <td>{props.retailers}</td>
                 </tr>
                 <tr className="table-primary">
                 <th scope="row">2</th>
                 <td>Retailer</td>
                 </tr>
-                <tr className="table-primary">
-                <th scope="row">3</th>
-                <td>Retailer</td>
-                </tr>
+                <RetailerRow/>
+
             </tbody>
             </table>    
         </div>
     );
 
 };
+
+
+
+  
+  
+
 
 export default LooksTable;

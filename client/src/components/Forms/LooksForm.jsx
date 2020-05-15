@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import "./LooksForm.css";
 
+
+
 class LooksForm extends Component {
 
     state = {
@@ -49,9 +51,11 @@ class LooksForm extends Component {
                 type="text"
                 placeholder="Retailer URL"
               />
-              <button onClick={this.handleFormSubmit}>Submit</button>
+              <button onClick={this.state.handleFormSubmit}>Submit</button>
             </form>
+
           </div>
+          
         );
       }
     }

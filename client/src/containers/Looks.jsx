@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import "./Looks.css";
 import LooksForm from "../components/Forms/LooksForm";
-import LooksTable from "../components/Tables/LooksTable";
 import InstagramDetail from "../components/Looks/InstagramDetail";
 import axios from "axios";
 
@@ -18,7 +17,6 @@ class Looks extends Component {
         this.searchInstagram("");
 
 };
-
 
 
 
@@ -61,12 +59,11 @@ class Looks extends Component {
                     <div className="row">
                         <div className="col-sm-3">
                         <div className="row">
-                            <LooksForm />
+                        <LooksForm />
                         </div>
                         <br></br>
                         <div className="row">
                         </div>
-                            <LooksTable />
                         </div>
                         <div className="col-sm-9">
                         <div>
