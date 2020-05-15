@@ -3,13 +3,37 @@
     background: url(../images/main.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
-}
+} */
 
 .looks-background {
     height: 100%;
     background: url(../images/main.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: .3;
 
+} 
+
+/* .looks-background::before {    
+    content: "";
+    background: url(../images/main.jpeg);
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.75;
 } */
+
+@media (min-width: 1200px) {
+    .container{
+        max-width: 150rem;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+}
+
+.card {
+    margin: 1px;
+    border-radius: 10px;
+}
