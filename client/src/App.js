@@ -13,9 +13,9 @@ function App() {
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  return <>
+  return (
   <BrowserRouter>
-    <NavBar />
+    <NavBar isLoggedIn={isLoggedIn} />
     <Switch>
       <Route exact path="/">
         <Home/>
@@ -40,8 +40,7 @@ function App() {
       </Route>
     </Switch>
   </BrowserRouter>
-  </>
-  
+)
  
 }
 
