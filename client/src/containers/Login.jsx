@@ -4,6 +4,10 @@ import logo from "../images/LogoRound.png";
 import Form from "../components/Login/Form";
 
 class Login extends Component {
+  state = {
+    username: "",
+    password: "",
+  };
 
   handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -12,9 +16,12 @@ class Login extends Component {
     });
   };
 
-  handleSubmit = (event, username, password) => {
+  handleSubmit = (event) => {
     event.preventDefault();
-    console.log("username " + username + " password " + password);
+    console.log(this.state);
+    console.log("username " + this.state.username + " password " + this.state.password);
+    this.props.setIsLoggedIn(true);
+    this.props.history.push("/retailer");
   };
 
   render() {
@@ -31,7 +38,12 @@ class Login extends Component {
                   alt="MallStalgia logo"
                 />
                 <div className="card-body">
-                  <Form handleSubmit={this.handleSubmit} />
+                  <Form
+                    username={this.state.username}
+                    password={this.state.password}
+                    handleInputChange={this.handleInputChange}
+                    handleSubmit={this.handleSubmit}
+                  />
                 </div>
               </div>
             </div>

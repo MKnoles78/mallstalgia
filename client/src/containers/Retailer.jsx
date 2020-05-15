@@ -10,7 +10,7 @@ class Retailer extends Component {
     render() {
         return (
             <div id="retailer-background">
-                
+                <h1>This is my retailer page.</h1>
             </div>
         );
     }
