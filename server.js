@@ -25,6 +25,10 @@ app.post("/api/user", (req, res) =>{
 
 })
 
+app.get("*", (req, res) => {
+   res.sendFile(path.resolve(__dirname,  "build", "index.html"));
+});
+
 db.sequelize.sync().then(() => {
   app.listen(PORT, () => {
     console.log(`Express App is running on http://localhost:${PORT}`);
