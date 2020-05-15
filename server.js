@@ -30,8 +30,8 @@ app.get("*", (req, res) => {
    res.sendFile(path.resolve(__dirname, "/client/build/index.html"));
 });
 
-db.sequelize.sync().then(() => {
+// db.sequelize.sync().then(() => {
   app.listen(PORT, () => {
     console.log(`Express App is running on http://localhost:${PORT}`);
   });
-});
+// });
