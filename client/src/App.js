@@ -24,7 +24,14 @@ function App() {
       />
       <Route exact path="/register" component={Register} />
       <Route exact path="/looks" component={Looks} />
-      <Route exact path="/retailer" component={Retailer} />
+      {/* <Route exact path="/retailer" component={Retailer} /> */}
+      <Route
+        exact
+        path="/retailer"
+        component={() => (
+          <Retailer isLoggedIn={isLoggedIn} />
+        )}
+      />
       <Route exact path="/foodcourt" component={Foodcourt} />
     </Router>
   );
