@@ -1,15 +1,24 @@
-body, html {
+body {
     height: 100%;
     background: url(../images/main.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.retailer-background {
+.login-background {
     height: 100%;
     background: url(../images/main.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
-    
+} 
 
+.container {
+    display: block;
+    width: 100;
+    padding-top: 100px;
 }
+
+.card {
+    background-color:#3e75cc;
+}
+

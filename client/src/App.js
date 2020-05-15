@@ -9,6 +9,8 @@ import Retailer from "./containers/Retailer";
 import NavBar from "./components/NavBar/NavBar";
 import NotFound from "./containers/NotFound";
 
+
+
 function App() {
   return <>
   <BrowserRouter>
@@ -38,6 +40,7 @@ function App() {
     </Switch>
   </BrowserRouter>
   </>
+  
  
 }
 

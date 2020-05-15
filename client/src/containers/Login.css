@@ -1,21 +1,21 @@
-body {
+/* body {
     height: 100%;
     background: url(../images/main.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
-}
+} */
 
 .login-background {
     height: 100%;
     background: url(../images/main.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
-}
+} 
 
 .container {
     display: block;
     width: 100;
-    padding-top: 200px;
+    padding-top: 100px;
 }
 
 .card {
