@@ -9,7 +9,9 @@ const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static("client/build"));
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
 
 app.get("/api/config", (req, res) => {
   res.json({
@@ -22,9 +24,9 @@ app.get("/api/config", (req, res) => {
 //   res.sendFile(path.join(__dirname, "/client/build/index.html"));
 // });
 
-app.post("/api/user", (req, res) =>{
+// app.post("/api/user", (req, res) =>{
 
-})
+// })
 
 app.get("*", (req, res) => {
    res.sendFile(path.resolve(__dirname, "/client/build/index.html"));
