@@ -34,7 +34,7 @@ class Looks extends Component {
         .then(result => {
             // console.log(result.data.graphql.user.edge_felix_video_timeline.edges);
             const edges = result.data.graphql.user.edge_felix_video_timeline.edges;
-            console.log(edges);
+            // console.log(edges);
             const shortCodes = edges.map(edge => edge.node.shortcode);
             console.log(shortCodes);
             this.setState({
@@ -57,7 +57,7 @@ class Looks extends Component {
     render() {
         return (
             <div className="looks-background">
-                <div className="container">
+                <div className="container" id="looksBlock">
                     <div className="row">
                         <div className="col-sm-3">
                         <div className="row">
@@ -70,23 +70,8 @@ class Looks extends Component {
                         </div>
                         <div className="col-sm-9">
                         <div>
-                        <table className="table table-dark">
-                            <thead>
-                                <tr>
-                                <th scope="col"></th>
-                                <th scope="col"></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                <td style={{width: "200px", height: "200px"}}>
-                                <InstagramDetail displayLooks = {this.state.shortCodes}
-                                 />
-                                </td>
-                                </tr> 
-                            </tbody>
-                            </table>     
-                            </div>
+                        <InstagramDetail displayLooks = {this.state.shortCodes}/>    
+                        </div>
                         </div>
                     </div>
                 </div>

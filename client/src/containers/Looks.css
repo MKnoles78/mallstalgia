@@ -24,3 +24,16 @@
     left: 0px;
     opacity: 0.75;
 } */
+
+@media (min-width: 1200px) {
+    .container{
+        max-width: 150rem;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+}
+
+.card {
+    margin: 1px;
+    border-radius: 10px;
+}
