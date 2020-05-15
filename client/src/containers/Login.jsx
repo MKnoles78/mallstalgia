@@ -38,7 +38,7 @@ class Login extends Component {
           console.log(decoded);
           await sessionStorage.setItem("jwt", response.data.data);
           await this.props.checkForToken();
-          await this.props.history.push(`/looks/${decoded.id}`);
+          await this.props.history.push(`//${decoded.id}`);
         }
       })
       .catch((err) => {
@@ -52,6 +52,13 @@ class Login extends Component {
     return (
       <>
         <div className="container">
+          {this.state.error && (
+          <div className="row" id ="alert" style={{backgroundColor: "#FE6D73", paddingTop: "2"}}>
+            <div className="col" style={{textAlign: "center", float: "none"}}>
+            <p style={{color: "#ffffff"}}>{this.state.error}</p>
+            </div>
+          </div>
+          )}
           <div className="row">
             <div className="col-sm-4"></div>
             <div className="col-sm-4">
