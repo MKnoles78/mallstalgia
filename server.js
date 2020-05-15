@@ -1,5 +1,7 @@
 require("dotenv").config();
 const express = require("express");
+const path = require("path");
+const db = require("./models");
 
 const PORT = process.env.PORT || 3001;
 
@@ -11,13 +13,20 @@ app.use(express.json());
 app.get("/api/config", (req, res) => {
   res.json({
     success: true,
+    currentPort: PORT,
   });
 });
 
-app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname, "/client/", "/client/src/containers/Home.jsx"));
-});
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "/client/build/index.html"));
+// });
 
-app.listen(PORT, () => {
-  console.log(`App is running on http://localhost:${PORT}`);
+app.post("/api/user", (req, res) =>{
+
+})
+
+db.sequelize.sync().then(() => {
+  app.listen(PORT, () => {
+    console.log(`Express App is running on http://localhost:${PORT}`);
+  });
 });

@@ -50,7 +50,6 @@ router.put("/:id", (req, res) => {
       fname: fname,
       lname: lname,
       zipcode:  zipcode,
-      imageURL: imageURL,
     },
     { where: { id: req.params.id } }
   )

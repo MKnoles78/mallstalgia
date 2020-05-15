@@ -4,16 +4,6 @@ import Form from "../components/Register/Form";
 
 class Register extends Component {
 
-<<<<<<< HEAD
-    state = {
-        
-    };
-    
-    render() {
-        return (
-            <div id="register-background">
-                
-=======
   handleInputChange = (event) => {
     const { name, value } = event.target;
     this.setState({
@@ -60,7 +50,6 @@ class Register extends Component {
                   <Form handleSubmit={this.handleSubmit} />
                 </div>
               </div>
->>>>>>> origin/master
             </div>
             <div className="col-sm-4"></div>
           </div>
