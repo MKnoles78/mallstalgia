@@ -14,11 +14,13 @@ function App() {
   return (
     <Router>
       <NavBar isLoggedIn={isLoggedIn} />
-      <Route exact path="/" component={Home} /> 
+      <Route exact path="/" component={Home} />
       <Route
         exact
         path="/login"
-        component={() => <Login setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} />}
+        component={() => (
+          <Login setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} />
+        )}
       />
       <Route exact path="/register" component={Register} />
       <Route exact path="/looks" component={Looks} />
