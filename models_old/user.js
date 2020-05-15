@@ -13,7 +13,7 @@ module.exports = function (sequelize, DataTypes) {
     },
     firstname: DataTypes.STRING,
     lastname: DataTypes.STRING,
-    zipcode: DataTypes.INTEGER,
+    zipcode: DataTypes.INT,
   });
 
   User.associate = function (models) {
