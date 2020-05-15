@@ -1,18 +1,32 @@
 import React, { Component } from "react";
 import "./Retailer.css";
-// import axios from "axios";
+import axios from "axios";
+// import UserContext from "../utils/UserContext";
 
 class Retailer extends Component {
-  //   state = {};
+    state = {
+        joke: ""
+    };
 
-  // componentDidMount() {
-  //     axios.get("")
-  //     .then(res => {
-  //         console.log(res.data);
-  //     }).catch(err => {
-  //         console.log(err)
-  //     })
-  // }
+    // const isLoggedIn = useContext(UserContext)
+
+  //TODO: call api
+  
+  componentDidMount() {
+      if(this.props.isLoggedIn) {
+        axios.get("https://api.chucknorris.io/jokes/random")
+        .then(res => {
+            console.log(res.data.value);
+            this.setState({
+                joke: res.data.value
+            })
+        }).catch(err => {
+            console.log(err)
+        })
+      }else{
+          alert("You are not signed in. ")
+      }
+  }
 
   // componentDidMount() {}
 
@@ -27,10 +41,7 @@ class Retailer extends Component {
                 <div className="card-body">
                   <h1>This is my Retail page.</h1>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-                    temporibus aut numquam aperiam, harum cum at praesentium
-                    dolor voluptatibus ratione iste quaerat quisquam hic placeat
-                    reprehenderit illo officiis, voluptate eveniet!
+                    {this.state.joke}
                   </p>
                 </div>
               </div>
