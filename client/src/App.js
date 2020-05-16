@@ -69,20 +69,20 @@ const checkForToken = async () => {
               <Register {...props} checkForToken={checkForToken} />
             )}
           />
-          {/* <PrivateRoute path="/looks/:id" render={(props) => <Retailer {...props} />} />
+          <PrivateRoute path="/looks/:id" render={(props) => <Retailer {...props} />} />
           <Route
             path="/looks/:id"
             render={(props) => <Retailer {...props} />}
           />
           <PrivateRoute path="/foodcourt/:id"
             render={(props) => <Foodcourt {...props} />}
-          /> */}
-            <Route path="/looks">
+          /> 
+            {/* <Route path="/looks">
             <Looks />
             </Route>
             <Route path="/foodcourt">
             <Foodcourt />
-            </Route>
+            </Route> */}
           <Route path="*">
             <NotFound />
           </Route>
