@@ -1,4 +1,20 @@
 .table-primary tbody+tbody, .table-primary td, .table-primary th, .table-primary thead th {
     border-color: grey;
     background-color: white;
+    width: 175px;
 }
+
+.looksTable {
+    background: #fff;
+    border: 1px solid #999;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 34px;
+    height: 34px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 100px;
+  }

@@ -1,8 +1,8 @@
 import React from 'react';
 import "./LooksTable.css";
-import RetailerRow from './RetailerRow';
 
-const LooksTable = (props) => {
+
+function LooksTable (props) {
     return (
         <div>
             <table className="table">
@@ -21,7 +21,12 @@ const LooksTable = (props) => {
                 <th scope="row">2</th>
                 <td>Retailer</td>
                 </tr>
-                <RetailerRow/>
+                {/* {props.retailers.map(retailer =>
+                <tr className="table-primary" key={retailer.id}>
+                <th scope="row">{retailer.id}</th>
+                <td>{retailer.name}</td>
+                </tr>   
+                    )} */}
 
             </tbody>
             </table>    
