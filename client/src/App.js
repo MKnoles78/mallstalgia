@@ -54,8 +54,8 @@ const checkForToken = async () => {
       <BrowserRouter>
         <NavBar/>
         <Switch>
-          <Route exact path="/">
-            <Home />
+          <Route exact path="/"> 
+            <Home /> 
           </Route>
           <Route
             path="/login"
@@ -69,14 +69,20 @@ const checkForToken = async () => {
               <Register {...props} checkForToken={checkForToken} />
             )}
           />
-          <PrivateRoute path="/looks/:id" render={(props) => <Looks {...props} />} />
+          {/* <PrivateRoute path="/looks/:id" render={(props) => <Retailer {...props} />} />
           <Route
-            path="/retailer/:id"
+            path="/looks/:id"
             render={(props) => <Retailer {...props} />}
           />
           <PrivateRoute path="/foodcourt/:id"
             render={(props) => <Foodcourt {...props} />}
-          />
+          /> */}
+            <Route path="/looks">
+            <Looks />
+            </Route>
+            <Route path="/foodcourt">
+            <Foodcourt />
+            </Route>
           <Route path="*">
             <NotFound />
           </Route>

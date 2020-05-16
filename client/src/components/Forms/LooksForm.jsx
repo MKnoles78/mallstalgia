@@ -1,63 +1,36 @@
-import React, { Component } from 'react';
+import React from 'react';
 import "./LooksForm.css";
 
 
 
-class LooksForm extends Component {
+function LooksForm (props){
 
-    state = {
-        retailerName: "",
-        retailerURL: "",
-      };
-    
-      handleInputChange = event => {
-        // Getting the value and name of the input which triggered the change
-        const { name, value } = event.target;
-    
-        // Updating the input's state
-        this.setState({
-          [name]: value
-        });
-      };
-    
-      handleFormSubmit = event => {
-        // Preventing the default behavior of the form submit (which is to refresh the page)
-        event.preventDefault();
-    
-        this.setState({
-          retailerName: "",
-          retailerURL: ""
-        });
-      };
-
-
-    
-      render() {
         // Notice how each input has a `value`, `name`, and `onChange` prop
         return (
           <div>
             <form className="form">
               <input
-                value={this.state.retailerName}
+                key={props.retailerName.id}
+                value={props.retailerName}
                 name="retailerName"
-                onChange={this.handleInputChange}
+                onChange={props.handleInputChange}
                 type="text"
                 placeholder="Retailer IG"
               />
               <input
-                value={this.state.retailerURL}
+                key={props.retailerURL.id}
+                value={props.retailerURL}
                 name="retailerURL"
-                onChange={this.handleInputChange}
+                onChange={props.handleInputChange}
                 type="text"
                 placeholder="Retailer URL"
               />
-              <button onClick={this.state.handleFormSubmit}>Submit</button>
+              <button className="looksForm" onClick={props.handleFormSubmit}>Submit</button>
             </form>
 
           </div>
           
         );
-      }
     }
     
 
