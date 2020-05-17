@@ -7,10 +7,12 @@ import FoodcourtSearch from "../FoodcourtSearch/FoodcourtSearch"
 export function FoodNav () {
     return (
         <div className="food-nav" >
+            <div className="searchComponents">
             <img src={logo} className="foodlogo" alt="logo" />
             <FoodcourtSearch />
-            <button className="button">Sign In</button>;
-            <button className="button">Register</button>;
+            <button className="foodNavButton">Sign In</button>
+            <button className="foodNavButton">Register</button>
+            </div>            
         </div>
     );
 };

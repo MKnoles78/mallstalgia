@@ -1,0 +1,33 @@
+.search-summary {
+    padding:  2rem 0;
+    max-width: 1000%;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+}
+
+.container-search {
+    display: flex;
+    background-color: #F2F3F4;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.container-search  > * {
+    max-width: 1000%;
+    
+}
+
+.filters {
+    display: flex;
+    width: 80%
+}
+
+.filters > * {
+    margin-right: .7rem;
+}

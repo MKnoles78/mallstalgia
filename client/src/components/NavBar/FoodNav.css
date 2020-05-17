@@ -1,10 +1,31 @@
 .foodlogo {
-    width: 75px;
+    width: 37px;
+    height: 37px;
     background-color: #d9f28b;
+    margin-right: 3px;
+    border-radius: 10%;
+
 }
 
 .food-nav {
     display: flex;
     background-color: #3e75cc;
     padding: 1rem 0;
+    justify-content: center;
+    
+}
+
+.searchComponents {
+    display: flex;
+    width: 90%;
+    align-items: center;
+    
+    
+}
+
+.foodNavButton {
+    background-color: #d9f28b;
+    width: 10em;
+    margin-left: 1em;
+    margin-left: 1em;
 }

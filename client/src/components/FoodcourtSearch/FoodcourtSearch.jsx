@@ -2,6 +2,8 @@ import React from 'react';
 import "./FoodcourtSearch.css"
 
 export function FoodcourtSearch (){
+
+    
     return (
         <>
         <div className="outer-foodinput">

@@ -1,0 +1,17 @@
+.dropdown {
+    margin: 0 2px;
+    
+}
+
+.btn-secondary {
+    color: grey;
+    background-color: #d9f28b;
+    border-color: #6c757d;
+    align-items: center
+}
+.sub-nav{
+    display: flex;
+    background-color: #3e75cc;
+    padding: 1rem 0;
+    justify-content: center;
+}
