@@ -1,7 +1,9 @@
 import React from 'react';
 import FoodNav from '../NavBar/FoodNav';
 import SubFoodNav from '../NavBar/SubNav/SubFoodNav';
-import SearchResults from './SearchResults/SearchResults'
+import SearchResultsSum from './SearchResultsSum/SearchResultsSum';
+import SearchResults from './SearchResults/SearchResults';
+
 
 
 export function Search (){
@@ -9,6 +11,7 @@ export function Search (){
         <div>
             <FoodNav />
             <SubFoodNav />
+            <SearchResultsSum />
             <SearchResults />
         </div>
     )
