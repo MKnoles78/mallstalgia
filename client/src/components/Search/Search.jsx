@@ -20,7 +20,11 @@ export function Search (){
         <div>
             <FoodNav term={term} location={locationParam}/>
             <SubFoodNav />
-            <SearchResultsSum  term={term} location={locationParam}/>
+            <SearchResultsSum   term={term} 
+                                location={locationParam} 
+                                amountResults={amountResults} 
+                                showResults={businesses ? businesses.length : 0}
+            />
             <SearchResults businesses={businesses}/>
         </div>
     )
