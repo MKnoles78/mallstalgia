@@ -13,6 +13,7 @@ function FoodcourtSearch (){
                 <button className="btn btn-outline-secondary" type="button" id="button-addon1">NEAR</button>
             </div>
             <input type="text" className="form-control" placeholder="Where" aria-label="Example text with button addon" aria-describedby="button-addon1"/>
+            <div className="button"><i className="fas fa-search"></i></div>
             </div>
         </div>
     );
