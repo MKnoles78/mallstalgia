@@ -1,17 +1,17 @@
 import React from "react";
-import "./TopNav.module.css"
+import "./TopNav.css";
 
 
 export function TopNav () {
     return(
-        <div>
-            <div>
+        <div className="foodNav">
+            <div className="left">
                 <span>Write a Review</span>
                 <span>Events</span>
             </div>
-            <div>
-                <span>Login</span>
-                <button className="button">SignUp</button>
+            <div className="right">
+                <span>Login </span>
+                <button className="foodButton">SignUp</button>    
             </div>
 
         </div>

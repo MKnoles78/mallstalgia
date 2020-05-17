@@ -1,0 +1,17 @@
+.foodNav {
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.foodButton {
+    width: 50%;
+}
+
+.left > * {
+    margin-right: 1.5rem;
+}
+.right > * {
+    margin-right: 1.5rem;
+}

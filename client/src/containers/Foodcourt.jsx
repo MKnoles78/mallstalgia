@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import "./Foodcourt.module.css";
+import "./Foodcourt.css";
 import FoodcourtForm from "../components/Forms/FoodcourtForm";
 import FoodcourtTable from "../components/Tables/FoodcourtTable";
 import API from "../utils/API"
