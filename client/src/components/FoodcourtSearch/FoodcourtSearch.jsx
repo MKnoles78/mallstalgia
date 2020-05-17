@@ -25,6 +25,7 @@ export function FoodcourtSearch (props){
             <input className="form-control"
                 onChange={(e) => setTerm(e.target.value)}
                 type="text" 
+                value={term}
                 placeholder="burgers, tacos, pizza..." aria-label="Example text with button addon" aria-describedby="button-addon1"/>
             <div className="input-group-prepend">
                 <div className="btn btn-outline-secondary" type="button" id="button-addon1">NEAR</div>
@@ -32,6 +33,7 @@ export function FoodcourtSearch (props){
             <input  className="form-control" 
             onChange={(e) => setLocation(e.target.value)}
             type="text"
+            value={location}
             placeholder="Where" aria-label="Example text with button addon" aria-describedby="button-addon1"/>
             <div className="button" onClick={submit}><i className="fas fa-search"></i></div>
             </div>

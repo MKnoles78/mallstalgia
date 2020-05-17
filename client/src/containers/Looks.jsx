@@ -90,7 +90,7 @@ class Looks extends Component {
                         <div className="col-sm-9">
                         <div>
                         {/* <InstagramDetail displayLooks = {this.state.shortCodes}/>  */}
-                        <div class="elfsight-app-68b2bb76-b13c-450d-a9fd-379d558d3afa"></div>   
+                        <div className="elfsight-app-68b2bb76-b13c-450d-a9fd-379d558d3afa"></div>   
                         </div>
                         </div>
                     </div>

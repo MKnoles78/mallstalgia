@@ -1,11 +1,11 @@
 import React from 'react';
 import "./SearchResultsSum.css";
 
-export function SearchResultsSum () {
+export function SearchResultsSum (props) {
     return (
         <div className="container-search">
         <div className="search-summary">
-        <h3>burgers<small class="text-muted">berlin</small></h3>
+        <h3>{props.term}<small className="text-muted">{props.location}</small></h3>
             <p>Showing 1-20 out of 543 results</p>
         </div>
         <div className="filters"> 
