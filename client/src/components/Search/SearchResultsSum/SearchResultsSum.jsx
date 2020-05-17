@@ -2,11 +2,16 @@ import React from 'react';
 import "./SearchResultsSum.css";
 
 export function SearchResultsSum (props) {
+
+    let resultStats = null;
+    if (props.amountResults && props.shownResults){
+        resultStats = <p>Showing 1-{props.shownResults} out of {props.amountResults} results</p>
+    }
     return (
         <div className="container-search">
         <div className="search-summary">
         <h3>{props.term}<small className="text-muted">{props.location}</small></h3>
-            <p>Showing 1-20 out of 543 results</p>
+            {resultStats}
         </div>
         <div className="filters"> 
         <button className="btn btn-secondary">
