@@ -24,24 +24,16 @@ class Register extends Component {
     });
   };
 
-  handleSubmit = (
-    event,
-    fname,
-    lname,
-    email,
-    username,
-    password,
-    zipcode
-  ) => {
+  handleSubmit = (event) => {
     event.preventDefault();
     Axios
       .post("/api/user", {
-        fname,
-        lname,
-        email,
-        username,
-        password,
-        zipcode,
+        username: this.state.username,
+        password: this.state.password,
+        email: this.state.email,
+        fname: this.state.fname,
+        lname: this.state.lname,
+        zipcode: this.state.zipcode,
       })
       .then(async (response) => {
         console.log(response.data.data);

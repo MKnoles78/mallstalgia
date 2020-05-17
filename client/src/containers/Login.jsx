@@ -5,14 +5,13 @@ import Form from "../components/Login/Form";
 import jwt from "jsonwebtoken";
 import axios from "axios";
 import { Link } from "react-router-dom";
-require("dotenv").config();
 
 class Login extends Component {
   state = {
     username: "",
     password: "",
     error: "",
-  }
+  };
 
   handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -31,6 +30,7 @@ class Login extends Component {
     })
       .then(async (response) => {
         console.log(response.data.success);
+        console.log(response.data.data)
         if (response.data.success) {
           const decoded = jwt.verify(
             response.data.data,
@@ -38,8 +38,7 @@ class Login extends Component {
           );
           console.log(decoded);
           await sessionStorage.setItem("jwt", response.data.data);
-          // await this.props.checkForToken();
-          // await this.props.history.push(`/looks/${decoded.id}`);
+          await this.props.history.push(`/looks`);
         }
       })
       .catch((err) => {
@@ -55,11 +54,18 @@ class Login extends Component {
       <>
         <div className="container">
           {this.state.error && (
-          <div className="row" id ="alert" style={{backgroundColor: "#FE6D73", paddingTop: "2"}}>
-            <div className="col" style={{textAlign: "center", float: "none"}}>
-            <p style={{color: "#ffffff"}}>{this.state.error}</p>
+            <div
+              className="row"
+              id="alert"
+              style={{ backgroundColor: "#FE6D73", paddingTop: "2" }}
+            >
+              <div
+                className="col"
+                style={{ textAlign: "center", float: "none" }}
+              >
+                <p style={{ color: "#ffffff" }}>{this.state.error}</p>
+              </div>
             </div>
-          </div>
           )}
           <div className="row">
             <div className="col-sm-4"></div>
@@ -71,7 +77,12 @@ class Login extends Component {
                   alt="MallStalgia logo"
                 />
                 <div className="card-body">
-                  <Form handleSubmit={this.handleSubmit} />
+                  <Form
+                    handleSubmit={this.handleSubmit}
+                    handleInputChange={this.handleInputChange}
+                    username={this.state.username}
+                    password={this.state.password}
+                  />
                   <Link to="register" style={{ color: "#FFF" }}>
                     Need to create an account?
                   </Link>
