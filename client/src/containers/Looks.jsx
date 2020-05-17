@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import "./Looks.css";
 import LooksForm from "../components/Forms/LooksForm";
 import LooksTable from "../components/Tables/LooksTable";
-import InstagramDetail from "../components/Looks/InstagramDetail";
+// import InstagramDetail from "../components/Looks/InstagramDetail";
 // import axios from "axios";
 import API from "../utils/API"
 
@@ -89,7 +89,8 @@ class Looks extends Component {
                         </div>
                         <div className="col-sm-9">
                         <div>
-                        <InstagramDetail displayLooks = {this.state.shortCodes}/>    
+                        {/* <InstagramDetail displayLooks = {this.state.shortCodes}/>  */}
+                        <div class="elfsight-app-68b2bb76-b13c-450d-a9fd-379d558d3afa"></div>   
                         </div>
                         </div>
                     </div>

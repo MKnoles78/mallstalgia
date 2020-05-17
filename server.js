@@ -16,6 +16,8 @@ app.use(express.json());
 app.use("/api/user", userController);
 app.use("/api/auth", user_authController);
 
+
+
 app.get("/api/config", (req, res) => {
   res.json({
     success: true,

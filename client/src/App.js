@@ -10,6 +10,7 @@ import Login from "./containers/Login";
 import Retailer from "./containers/Retailer";
 import NavBar from "./components/NavBar/NavBar";
 import NotFound from "./containers/NotFound";
+import FoodcourtLanding from "./containers/FoodcourtLanding";
 
 
 function App(props) {
@@ -69,20 +70,23 @@ const checkForToken = async () => {
               <Register {...props} checkForToken={checkForToken} />
             )}
           />
-          <PrivateRoute path="/looks/:id" render={(props) => <Retailer {...props} />} />
+          {/* <PrivateRoute path="/looks/:id" render={(props) => <Retailer {...props} />} />
           <Route
             path="/looks/:id"
             render={(props) => <Retailer {...props} />}
           />
           <PrivateRoute path="/foodcourt/:id"
             render={(props) => <Foodcourt {...props} />}
-          /> 
-            {/* <Route path="/looks">
+          />  */}
+            <Route path="/looks">
             <Looks />
             </Route>
             <Route path="/foodcourt">
             <Foodcourt />
-            </Route> */}
+            </Route>
+            <Route path="/foodcourtlanding">
+            <FoodcourtLanding />
+            </Route>
           <Route path="*">
             <NotFound />
           </Route>
