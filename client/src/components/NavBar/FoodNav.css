@@ -1,0 +1,10 @@
+.foodlogo {
+    width: 75px;
+    background-color: #d9f28b;
+}
+
+.food-nav {
+    display: flex;
+    background-color: #3e75cc;
+    padding: 1rem 0;
+}

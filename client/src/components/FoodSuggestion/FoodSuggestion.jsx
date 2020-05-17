@@ -1,7 +1,7 @@
 import React from 'react';
 import "./FoodSuggestion.css"
 
-function FoodSuggestion () {
+export function FoodSuggestion () {
     return (
         <div className="suggestions">
             <div className="button"><i className="fas fa-utensils"></i>Restaurants</div>

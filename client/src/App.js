@@ -11,6 +11,7 @@ import Retailer from "./containers/Retailer";
 import NavBar from "./components/NavBar/NavBar";
 import NotFound from "./containers/NotFound";
 import FoodcourtLanding from "./containers/FoodcourtLanding";
+import Search from "./components/Search/Search";
 
 
 function App(props) {
@@ -86,6 +87,9 @@ const checkForToken = async () => {
             </Route>
             <Route path="/foodcourtlanding">
             <FoodcourtLanding />
+            </Route>
+            <Route path="/search">
+            <Search />
             </Route>
           <Route path="*">
             <NotFound />

@@ -1,9 +1,10 @@
 import React from 'react';
 import "./FoodcourtSearch.css"
 
-function FoodcourtSearch (){
+export function FoodcourtSearch (){
     return (
-        <div>
+        <>
+        <div className="outer-foodinput">
             <div className="input-group mb-3" id="foodinput">
             <div className="input-group-prepend">
                 <button className="btn btn-outline-secondary" type="button" id="button-addon1">Search</button>
@@ -16,6 +17,7 @@ function FoodcourtSearch (){
             <div className="button"><i className="fas fa-search"></i></div>
             </div>
         </div>
+        </>
     );
 };
 

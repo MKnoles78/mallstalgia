@@ -7,11 +7,13 @@ import FoodSuggestion from "../components/FoodSuggestion/FoodSuggestion";
 
 export function FoodcourtLanding (){
     return (
+    <div className="landing">
     <div className="search-food">
        <TopNav/>
        <img src={icon} className="icon" alt="logo"/>
        <FoodcourtSearch />
        <FoodSuggestion />
+    </div>
     </div>
     )
 

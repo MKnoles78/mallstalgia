@@ -1,11 +1,16 @@
+
+.outer-foodinput {
+    justify-content: center;
+    width: 100%;
+    margin-bottom: -15px;
+}
 #foodinput {
-    width: 75%;
+    width: 100%;
     align-items: center;
     
 }
 
-
-#button-addon1 {
+#button-addon1 {    
     background-color: #d9f28b ;
 }
 
