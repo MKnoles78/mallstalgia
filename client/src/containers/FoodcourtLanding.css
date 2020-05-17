@@ -3,3 +3,8 @@
     height: 50px;
     margin-left: 3rem;
 }
+.search-food {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
