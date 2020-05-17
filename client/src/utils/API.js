@@ -9,10 +9,10 @@ const BASEURL = "https://www.instagram.com/express/?__a=1"
 const YelpURL = "https://api.yelp.com/v3/businesses/search"
 
 export default {
-  search: function() {
+  IGsearch: function() {
     return axios.get(BASEURL);
   },
-  search: function(){
+  Yelpsearch: function(){
     return axios.get(YelpURL);
   }
 };

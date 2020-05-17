@@ -26,7 +26,7 @@ class Looks extends Component {
     }
 
       searchInstagram = query => {
-        API.search()
+        API.IGsearch()
         .then(result => {
             // console.log(result.data.graphql.user.edge_felix_video_timeline.edges);
             const edges = result.data.graphql.user.edge_felix_video_timeline.edges;
