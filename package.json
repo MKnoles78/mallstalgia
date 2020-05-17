@@ -30,8 +30,5 @@
     "concurrently": "^5.2.0",
     "mysql2": "^2.1.0",
     "sequelize": "^5.21.9"
-  },
-  "devDependencies": {
-    "concurrently": "^5.2.0"
   }
 }

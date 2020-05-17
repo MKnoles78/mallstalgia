@@ -2,23 +2,23 @@ import React, { useState } from "react";
 
 const Form = (props) => {
 
-    const [firstName, setFirstName] = useState("");
-    const [lastName, setLastName] = useState("");
+    const [fname, setfname] = useState("");
+    const [lname, setlname] = useState("");
     const [email, setEmail] = useState("");
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    const [zipCode, setzipCode] = useState("");
+    const [zipcode, setzipcode] = useState("");
 
   return (
-    <form onSubmit={e => {props.handleSubmit(e, firstName, lastName, email, username, password, zipCode)}}>
+    <form onSubmit={e => {props.handleSubmit(e, fname, lname, email, username, password, zipcode)}}>
         <div className="form-group">
         <label>First Name</label>
         <input
           type="text"
           className="form-control"
-          name="firstName"
-          value={firstName}
-          onChange={(e) => {setFirstName(e.target.value)}}
+          name="fname"
+          value={fname}
+          onChange={(e) => {setfname(e.target.value)}}
         />
       </div>
       <div className="form-group">
@@ -26,9 +26,9 @@ const Form = (props) => {
         <input
           type="text"
           className="form-control"
-          name="lastName"
-          value={lastName}
-          onChange={(e) => {setLastName(e.target.value)}}
+          name="lname"
+          value={lname}
+          onChange={(e) => {setlname(e.target.value)}}
         />
       </div>
       <div className="form-group">
@@ -66,9 +66,9 @@ const Form = (props) => {
         <input
           type="number"
           className="form-control"
-          name="zipCode"
-          value={zipCode}
-          onChange={(e) => {setzipCode(e.target.value)}}
+          name="zipcode"
+          value={zipcode}
+          onChange={(e) => {setzipcode(e.target.value)}}
         />
       </div>
       <button type="submit" className="btn btn-primary">
