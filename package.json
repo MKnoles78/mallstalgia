@@ -34,7 +34,8 @@
     "jsonwebtoken": "^8.5.1",
     "mysql2": "^2.1.0",
     "react-fontawesome": "^1.7.1",
-    "sequelize": "^5.21.9"
+    "sequelize": "^5.21.9",
+    "use-react-router": "^1.0.7"
   },
   "devDependencies": {
     "concurrently": "^5.2.0"
