@@ -3,8 +3,9 @@ import "./Login.css";
 import logo from "../images/LogoRound.png";
 import Form from "../components/Login/Form";
 import jwt from "jsonwebtoken";
-import Axios from "axios";
+import axios from "axios";
 import { Link } from "react-router-dom";
+require("dotenv").config();
 
 class Login extends Component {
   state = {
@@ -24,29 +25,30 @@ class Login extends Component {
   handleSubmit = (event, username, password) => {
     event.preventDefault();
     console.log("username " + username + " password " + password);
-    Axios.post("/api/auth", {
+    axios.post("/api/auth", {
       username,
       password,
     })
       .then(async (response) => {
-        console.log(response.data.data);
+        console.log(response.data.success);
         if (response.data.success) {
-          const decoded = await jwt.verify(
+          const decoded = jwt.verify(
             response.data.data,
-            process.env.REACT_APP_SECRET_KEY
+            "carolbaskinkilledherhusband"
           );
           console.log(decoded);
           await sessionStorage.setItem("jwt", response.data.data);
-          await this.props.checkForToken();
-          await this.props.history.push(`//${decoded.id}`);
+          // await this.props.checkForToken();
+          // await this.props.history.push(`/looks/${decoded.id}`);
         }
       })
       .catch((err) => {
-        console.log(err);
-        console.log(err.response.data.message);
-        this.setState({ error: err.response.data.message });
+        console.log(err)
+        console.log(err.data);
+        this.setState({ error: err.name });
       });
   };
+
 
   render() {
     return (
