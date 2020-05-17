@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 import "./Looks.css";
 import LooksForm from "../components/Forms/LooksForm";
+import LooksTable from "../components/Tables/LooksTable";
 import InstagramDetail from "../components/Looks/InstagramDetail";
-import axios from "axios";
+// import axios from "axios";
+import API from "../utils/API"
 
 class Looks extends Component {
 
     state = {
         search: "",
         shortCodes: [],
-        retailer: [],
+        retailerName: [],
+        retailerURL: [],
     
     };
 
@@ -18,17 +21,12 @@ class Looks extends Component {
 
 };
 
-
+    renderTable(i) {
+      return <LooksTable retailers = {this.state.retailerName} />;
+    }
 
       searchInstagram = query => {
-        // API.search()
-        //   //.then(res => this.setState({ result: res.data }))
-        //   .then(res => {
-        //       console.log(res.data);
-        //       // this.setState({ result: res.data})
-        //   })
-        //   .catch(err => console.log(err));
-        axios.get("https://www.instagram.com/express/?__a=1")
+        API.search()
         .then(result => {
             // console.log(result.data.graphql.user.edge_felix_video_timeline.edges);
             const edges = result.data.graphql.user.edge_felix_video_timeline.edges;
@@ -44,12 +42,27 @@ class Looks extends Component {
       };
     
       handleInputChange = event => {
-        const value = event.target.value;
-        const name = event.target.name;
+        // Getting the value and name of the input which triggered the change
+        const { name, value } = event.target;
+    
+        // Updating the input's state
         this.setState({
           [name]: value
         });
       };
+
+      handleFormSubmit = event => {
+        // Preventing the default behavior of the form submit (which is to refresh the page)
+        event.preventDefault();
+        const retailerName = this.state.retailerName.slice();
+        console.log("you clicked me")
+        this.setState({
+          retailerName: retailerName,
+          retailerURL: '',
+        });
+      };
+
+  
 
     
     render() {
@@ -59,10 +72,19 @@ class Looks extends Component {
                     <div className="row">
                         <div className="col-sm-3">
                         <div className="row">
-                        <LooksForm />
+                        <LooksForm 
+                        retailerName = {this.state.retailerName}
+                        retailerURL = {this.state.retailerURL}
+                        handleFormSubmit={this.handleFormSubmit}
+                        handleInputChange={this.handleInputChange}
+                        />
                         </div>
                         <br></br>
                         <div className="row">
+                          {this.renderTable(0)}
+                        </div>
+                        <div className="row">
+                          {this.renderTable(1)}
                         </div>
                         </div>
                         <div className="col-sm-9">
