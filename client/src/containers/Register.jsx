@@ -13,37 +13,36 @@ class Register extends Component {
     username: "",
     password: "",
     zipcode: "",
-    error: ""
+    error: "",
   };
 
   handleInputChange = (event) => {
     const { name, value } = event.target;
     this.setState({
       [name]: value,
-      error: ""
+      error: "",
     });
   };
 
-  handleSubmit = (event) => {
+  handleSubmit = (event, username, password, email, fname, lname, zipcode) => {
     event.preventDefault();
-    Axios
-      .post("/api/user", {
-        username: this.state.username,
-        password: this.state.password,
-        email: this.state.email,
-        fname: this.state.fname,
-        lname: this.state.lname,
-        zipcode: this.state.zipcode,
-      })
+    Axios.post("/api/user", {
+      username,
+      password,
+      email,
+      fname,
+      lname,
+      zipcode,
+    })
       .then(async (response) => {
         console.log(response.data.data);
         if (response.data.success) {
           const decoded = await jwt.verify(
             response.data.data,
-            process.env.REACT_APP_SECRET_KEY
+            "carolbaskinkilledherhusband"
           );
           console.log(decoded);
-          await sessionStorage.setItem("jwt", response.data.data);
+          sessionStorage.setItem("jwt", response.data.data);
           await this.props.checkForToken();
           await this.props.history.push(`/looks/${decoded.id}`);
         }
@@ -51,7 +50,7 @@ class Register extends Component {
       .catch((err) => {
         console.log(err);
         console.log(err.response);
-        this.setState({ error: err.response});
+        this.setState({ error: err.response });
       });
   };
 
