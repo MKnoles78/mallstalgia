@@ -11,8 +11,8 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: false,
       unique: true,
     },
-    firstname: DataTypes.STRING,
-    lastname: DataTypes.STRING,
+    fname: DataTypes.STRING,
+    lname: DataTypes.STRING,
     zipcode: DataTypes.INTEGER,
   });
 

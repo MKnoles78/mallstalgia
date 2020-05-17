@@ -6,13 +6,17 @@ const jwt = require("jsonwebtoken");
 router.post("/", (req, res) => {
   const username = req.body.username ? req.body.username.trim() : "";
   const password = req.body.password ? req.body.password.trim() : "";
+  const email = req.body.email ? req.body.email.trim() : "";
+  const fname = req.body.fname ? req.body.fname.trim() : "";
+  const lname = req.body.lname ? req.body.lname.trim() : "";
+  const zipcode = req.body.zipcode ? req.body.zipcode.trim() : "";
 
-  if (username && password) {
-    db.User.create({ username, password })
+  if (fname && lname && email && username && password && zipcode) {
+    db.User.create({ username, password, email, fname, lname, zipcode })
       .then(async (newUser) => {
         const token = await jwt.sign(
           {
-            username: newUser.username,
+            email: newUser.email,
             id: newUser.id,
             exp: Math.floor(Date.now() / 1000) + 60 * 60,
           },
@@ -40,16 +44,18 @@ router.post("/", (req, res) => {
   }
 });
 
-router.put("/:id", (req, res) => {
+
+  router.put("/:id", (req, res) => {
   console.log(req.body);
-  const { username, fname, lname, zipcode } = req.body;
+  const { fname, lname, email, username, password, zipcode } = req.body;
   const { id } = req.params;
   db.User.update(
     {
-      username: username,
       fname: fname,
       lname: lname,
-      zipcode:  zipcode,
+      email: email,
+      username: username,
+      zipcode: zipcode,
     },
     { where: { id: req.params.id } }
   )
@@ -67,6 +73,28 @@ router.put("/:id", (req, res) => {
     });
 });
 
-router.get("/:id", (req, res) => {});
+router.get("/:id", (req, res) => {
+  db.User.findOne({
+    where: {
+      id: req.params.id,
+    },
+  }).then((user) => res.json(user));
+});
+
+router.get("/", (req, res) => {
+  console.log(req.query);
+  let newObjectToQuery = {};
+  console.log(newObjectToQuery);
+  db.User.findAll({
+    where: newObjectToQuery,
+  })
+    .then((result) => {
+      res.json(result);
+    })
+    .catch((err) => {
+      res.json(err);
+    });
+});
+
 
 module.exports = router;
