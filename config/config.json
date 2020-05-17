@@ -7,6 +7,9 @@
     "dialect": "mysql",
     "operatorsAliases": false
   },
+  "env:": {
+    "REACT_APP_SECRET_KEY": "carolbaskinkilledherhusband"
+          },
   "test": {
     "username": "root",
     "password": null,

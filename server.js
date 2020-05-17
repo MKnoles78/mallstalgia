@@ -13,9 +13,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 
-app.use("/api/user", userController);
-app.use("/api/auth", user_authController);
-
 app.get("/api/config", (req, res) => {
   res.json({
     success: true,
@@ -23,13 +20,11 @@ app.get("/api/config", (req, res) => {
   });
 });
 
-// app.get("*", (req, res) => {
-//   res.sendFile(path.join(__dirname, "/client/build/index.html"));
-// });
+app.use("/api/user", userController);
+app.use("/api/auth", user_authController);
 
-// app.post("/api/user", (req, res) =>{
 
-// })
+
 app.use(express.static("client/build"));
 
 app.get("*", (req, res) => {

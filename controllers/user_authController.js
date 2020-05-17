@@ -13,7 +13,7 @@ router.post("/", (req, res) => {
     .then(async (foundUser) => {
       console.log(foundUser);
       if (foundUser && foundUser.password === req.body.password) {
-        const token = await jwt.sign(
+        const token = jwt.sign(
           {
             username: foundUser.username,
             id: foundUser.id,
@@ -22,7 +22,7 @@ router.post("/", (req, res) => {
           process.env.REACT_APP_SECRET_KEY
         );
         console.log(token);
-        await res.json({
+          res.json({
           success: true,
           data: token,
         });
