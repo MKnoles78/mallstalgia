@@ -12,7 +12,7 @@ class Login extends Component {
     username: "",
     password: "",
     error: "",
-  };
+  }
 
   handleInputChange = (event) => {
     const { name, value } = event.target;
