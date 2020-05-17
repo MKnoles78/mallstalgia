@@ -9,6 +9,8 @@ import Login from "./containers/Login";
 import Retailer from "./containers/Retailer";
 import NavBar from "./components/NavBar/NavBar";
 import NotFound from "./containers/NotFound";
+import FoodcourtLanding from "./containers/FoodcourtLanding";
+import Search from "./components/Search/Search";
 
 function App() {
   const [userObject, setUserObject] = useState({});
@@ -55,24 +57,47 @@ function App() {
           isLoggedIn={isLoggedIn}
           logOutUser={logOutUser}
           userObject={userObject}
-        />
-        <Switch>
-          <Route 
-          exact path={["/"]}>
+           />
+           <Switch>
+           <Route 
+           exact path="/">
             <Home />
-          </Route>
-          <Route
-            path={["/login"]}
+           </Route>
+           <Route
+            path="/login"
             render={(props) => (
               <Login {...props} />
             )}
-          />
-          <Route
-            path={["/register"]}
+           />
+           <Route
+            path="/register"
             render={(props) => (
               <Register {...props} checkForToken={checkForToken} />
             )}
-          />
+            />
+            <Route 
+                path="/looks">
+                <Looks />
+            </Route>
+            <Route 
+                path="/foodcourt">
+                <Foodcourt />
+            </Route>
+            <Route 
+                path="/foodcourtlanding">
+                <FoodcourtLanding />
+            </Route>
+            <Route 
+                path="/search">
+                <Search />
+            </Route>
+            <Route 
+                path="*">
+                <NotFound />
+          </Route>
+
+          {/* <PrivateRoute path="/looks/:id" render={(props) => <Retailer {...props} />} />
+          
           <Route
             path={["/looks"]}
             render={(props) => <Looks {...props} />}
@@ -84,10 +109,11 @@ function App() {
           <Route
             path={["/foodcourt"]}
             render={(props) => <Foodcourt {...props} />}
-          />
-          <Route path={["*"]}>
-            <NotFound />
-          </Route>
+          />  
+          
+          */}
+
+
         </Switch>
       </Router>
     </>

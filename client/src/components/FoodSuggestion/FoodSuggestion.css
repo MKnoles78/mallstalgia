@@ -1,0 +1,109 @@
+.suggestions {
+    display: flex;
+    justify-content: center;
+    font-size: small;
+}
+
+
+.fa-utensils {
+    height: auto;
+    width: auto;
+    fill: grey;
+    background-color: #d9f28b;
+    padding: 6px;
+    border-radius: 50%;
+    margin-right: 3px;
+    margin-left: 3px;
+}
+
+.fa-concierge-bell {
+    height: auto;
+    width: auto;
+    fill: grey;
+    background-color: #d9f28b;
+    padding: 6px;
+    border-radius: 50%;
+    margin-right: 3px;
+    margin-left: 3px;
+}
+
+.fa-truck {
+    height: auto;
+    width: auto;
+    fill: grey;
+    background-color: #d9f28b;
+    padding: 6px;
+    border-radius: 50%;
+    margin-right: 3px;
+    margin-left: 3px;
+}
+
+.fa-cocktail {
+    height: auto;
+    width: auto;
+    fill: grey;
+    background-color: #d9f28b;
+    padding: 6px;
+    border-radius: 50%;
+    margin-right: 3px;
+    margin-left: 3px;
+    
+}
+
+.fa-house-user {
+    height: auto;
+    width: auto;
+    fill: grey;
+    background-color: #d9f28b;
+    padding: 6px;
+    border-radius: 50%;
+    margin-right: 3px;
+    margin-left: 3px;
+}
+.fa-car {
+    height: auto;
+    width: auto;
+    fill: grey;
+    background-color: #d9f28b;
+    padding: 6px;
+    border-radius: 50%;
+    margin-right: 3px;
+    margin-left: 3px;
+}
+.fa-info-circle {
+    height: auto;
+    width: auto;
+    fill: grey;
+    background-color: #d9f28b;
+    padding: 6px;
+    border-radius: 50%;
+    margin-right: 3px;
+    margin-left: 3px;
+}
+
+div.button {
+    margin-right: 3px;
+    margin-left: 3px;
+}
+
+.fa-pen {
+    height: auto;
+    width: auto;
+    fill: grey;
+    background-color: #d9f28b;
+    padding: 6px;
+    border-radius: 50%;
+    margin-right: 3px;
+    margin-left: 3px;
+}
+.fa-store {
+    height: auto;
+    width: auto;
+    fill: grey;
+    background-color: #d9f28b;
+    padding: 6px;
+    border-radius: 50%;
+    margin-right: 3px;
+    margin-left: 3px;
+}
+

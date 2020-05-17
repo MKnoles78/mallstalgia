@@ -1,13 +1,35 @@
 import React, { Component } from 'react';
 import "./Foodcourt.css";
 import FoodcourtForm from "../components/Forms/FoodcourtForm";
-import FoodcourtTable from "../components/Tables/FoodcourtTable"
+import FoodcourtTable from "../components/Tables/FoodcourtTable";
+import API from "../utils/API"
 
 
 
 class Foodcourt extends Component {
 
   state = {};
+
+  componentDidMount() {
+    this.searchYelp("");
+
+};
+
+  searchYelp = query => {
+    API.search()
+    .then(result => {
+        console.log(result);
+        // const edges = result.data.graphql.user.edge_felix_video_timeline.edges;
+        // console.log(edges);
+        // const shortCodes = edges.map(edge => edge.node.shortcode);
+        // console.log(shortCodes);
+        // this.setState({
+        //     shortCodes
+        // })
+    }).catch(err => {
+        console.log(err);
+    })
+  };
 
   render() {
     return (
