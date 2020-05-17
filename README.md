@@ -1,5 +1,4 @@
 # Project 3 - Mallstalgia
->>>>>>> 4795455d5ebee5303cfe83c83127bab21c70c1d9
 
 ## Description
 
