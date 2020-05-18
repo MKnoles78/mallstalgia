@@ -42,13 +42,11 @@ function App() {
     }
   };
 
-
   const logOutUser = () => {
     setUserObject({});
     setIsLoggedIn(false);
     sessionStorage.setItem("jwt", "");
   };
-
 
   return (
     <>
@@ -57,63 +55,42 @@ function App() {
           isLoggedIn={isLoggedIn}
           logOutUser={logOutUser}
           userObject={userObject}
-           />
-           <Switch>
-           <Route 
-           exact path="/">
+        />
+        <Switch>
+          <Route exact path="/">
             <Home />
-           </Route>
-           <Route
+          </Route>
+          <Route
             path="/login"
             render={(props) => (
-              <Login {...props} />
+              <Login
+                {...props}
+                setIsLoggedIn={setIsLoggedIn}
+                isLoggedIn={isLoggedIn}
+              />
             )}
-           />
-           <Route
+          />
+          <Route
             path="/register"
             render={(props) => (
-              <Register {...props} />
+              <Register {...props}/>
             )}
-            />
-            <Route 
-                path="/looks">
-                <Looks />
-            </Route>
-            <Route 
-                path="/foodcourt">
-                <Foodcourt />
-            </Route>
-            <Route 
-                path="/foodcourtlanding">
-                <FoodcourtLanding />
-            </Route>
-            <Route 
-                path="/search">
-                <Search />
-            </Route>
-            <Route 
-                path="*">
-                <NotFound />
-          </Route>
-
-          {/* <PrivateRoute path="/looks/:id" render={(props) => <Retailer {...props} />} />
-          
+          />
           <Route
             path={["/looks"]}
-            render={(props) => <Looks {...props} />}
+            render={(props) => <Looks {...props} isLoggedIn={isLoggedIn} />}
           />
           <Route
             path={["/retailer"]}
-            render={(props) => <Retailer {...props} />}
+            render={(props) => <Retailer {...props} isLoggedIn={isLoggedIn} />}
           />
           <Route
             path={["/foodcourt"]}
-            render={(props) => <Foodcourt {...props} />}
-          />  
-          
-          */}
-
-
+            render={(props) => <Foodcourt {...props} isLoggedIn={isLoggedIn} />}
+          />
+          <Route path={["*"]}>
+            <NotFound />
+          </Route>
         </Switch>
       </Router>
     </>
