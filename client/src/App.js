@@ -9,8 +9,8 @@ import Login from "./containers/Login";
 // import Retailer from "./containers/Retailer";
 import NavBar from "./components/NavBar/NavBar";
 import NotFound from "./containers/NotFound";
-import FoodcourtLanding from "./containers/FoodcourtLanding";
-import Search from "./components/Search/Search";
+//import FoodcourtLanding from "./containers/FoodcourtLanding";
+//import Search from "./components/Search/Search";
 
 
 
@@ -44,13 +44,11 @@ function App() {
     }
   };
 
-
   const logOutUser = () => {
     setUserObject({});
     setIsLoggedIn(false);
     sessionStorage.setItem("jwt", "");
   };
-
 
   return (
     <>
@@ -59,22 +57,26 @@ function App() {
           isLoggedIn={isLoggedIn}
           logOutUser={logOutUser}
           userObject={userObject}
-           />
-           <Switch>
-           <Route 
-           exact path="/">
+        />
+        <Switch>
+          <Route exact path="/">
             <Home />
-           </Route>
-           <Route
+          </Route>
+          <Route
             path="/login"
             render={(props) => (
-              <Login {...props} />
+
+              <Login
+                {...props}
+                setIsLoggedIn={setIsLoggedIn}
+                isLoggedIn={isLoggedIn}
+              />
             )}
-           />
-           <Route
+          />
+          <Route
             path="/register"
             render={(props) => (
-              <Register {...props} checkForToken={checkForToken} />
+              <Register {...props}/>
             )}
             />
             <Route 
@@ -98,20 +100,16 @@ function App() {
           
           {/* <Route
             path={["/looks"]}
-            render={(props) => <Looks {...props} />}
+            render={(props) => <Looks {...props} isLoggedIn={isLoggedIn} />}
           />
           <Route
             path={["/retailer"]}
-            render={(props) => <Retailer {...props} />}
+            render={(props) => <Retailer {...props} isLoggedIn={isLoggedIn} />}
           />
           <Route
             path={["/foodcourtlanding"]}
             render={(props) => <FoodcourtLanding {...props} />}
           />   */}
-          
-         
-
-
         </Switch>
       </Router>
     </>
