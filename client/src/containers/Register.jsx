@@ -44,7 +44,7 @@ class Register extends Component {
           );
           console.log(decoded);
           sessionStorage.setItem("jwt", response.data.data);
-          await this.props.history.push(`/looks/${decoded.id}`);
+          await this.props.history.push(`/login/`);
         }
       })
       .catch((err) => {
