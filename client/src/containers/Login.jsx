@@ -24,6 +24,7 @@ class Login extends Component {
   handleSubmit = (event, username, password) => {
     event.preventDefault();
     console.log("username " + username + " password " + password);
+    this.props.setIsLoggedIn(true);
     axios
       .post("/api/auth", {
         username,

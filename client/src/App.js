@@ -64,7 +64,7 @@ function App() {
           <Route
             path={["/login"]}
             render={(props) => (
-              <Login {...props} />
+              <Login {...props} setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} />
             )}
           />
           <Route
@@ -75,15 +75,15 @@ function App() {
           />
           <Route
             path={["/looks"]}
-            render={(props) => <Looks {...props} />}
+            render={(props) => <Looks {...props} isLoggedIn={isLoggedIn}/>}
           />
           <Route
             path={["/retailer"]}
-            render={(props) => <Retailer {...props} />}
+            render={(props) => <Retailer {...props} isLoggedIn={isLoggedIn}/>}
           />
           <Route
             path={["/foodcourt"]}
-            render={(props) => <Foodcourt {...props} />}
+            render={(props) => <Foodcourt {...props} isLoggedIn={isLoggedIn}/>}
           />
           <Route path={["*"]}>
             <NotFound />

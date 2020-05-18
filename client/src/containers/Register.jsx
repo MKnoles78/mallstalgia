@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Axios from "axios";
+import axios from "axios";
 import "./Register.css";
 import Form from "../components/Register/Form";
 import jwt from "jsonwebtoken";
@@ -26,7 +26,7 @@ class Register extends Component {
 
   handleSubmit = (event, fname, lname, email, username, password, zipcode) => {
     event.preventDefault();
-    Axios.post("/api/user", {
+    axios.post("/api/user", {
       fname,
       lname,
       email,
