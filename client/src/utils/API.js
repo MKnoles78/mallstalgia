@@ -6,7 +6,7 @@ const BASEURL = "https://www.instagram.com/express/?__a=1"
 
 // const query = "this is the value of the shortcodes";
 
-const YelpURL = "https://api.yelp.com/v3/businesses/search"
+const YelpURL = "https://api.yelp.com/v3/"
 
 export default {
   IGsearch: function() {
