@@ -12,11 +12,11 @@ router.post("/", (req, res) => {
   const zipcode = req.body.zipcode ? req.body.zipcode.trim() : "";
 
   if (fname && lname && email && username && password && zipcode) {
-    db.User.create({ username, password, email, fname, lname, zipcode })
+    db.User.create({ fname, lname, email, username, password, zipcode })
       .then(async (newUser) => {
         const token = await jwt.sign(
           {
-            email: newUser.email,
+            username: newUser.username,
             id: newUser.id,
             exp: Math.floor(Date.now() / 1000) + 60 * 60,
           },
@@ -44,8 +44,7 @@ router.post("/", (req, res) => {
   }
 });
 
-
-  router.put("/:id", (req, res) => {
+router.put("/:id", (req, res) => {
   console.log(req.body);
   const { fname, lname, email, username, password, zipcode } = req.body;
   const { id } = req.params;
@@ -95,6 +94,5 @@ router.get("/", (req, res) => {
       res.json(err);
     });
 });
-
 
 module.exports = router;

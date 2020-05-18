@@ -22,12 +22,10 @@ app.get("/api/config", (req, res) => {
 app.use("/api/user", userController);
 app.use("/api/auth", user_authController);
 
-
-
 app.use(express.static("client/build"));
 
 app.get("*", (req, res) => {
-   res.sendFile(path.resolve(__dirname, "/client/build/index.html"));
+  res.sendFile(path.resolve(__dirname, "/client/build/index.html"));
 });
 
 db.sequelize.sync().then(() => {
