@@ -13,67 +13,58 @@ const NavBar = (props) => {
         <img src={icon} className="icon" id="icon" alt="" />
       </NavLink>
 
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="navbar-nav">
-          <li className="nav-item">
-            <NavLink
-              to="/login"
-              className="nav-link"
-              id="navLink"
-              activeStyle={{ color: "pink" }}
-            >
-              Login
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink
-              to="/register"
-              className="nav-link"
-              id="navLink"
-              activeStyle={{ color: "pink" }}
-            >
-              Register
-            </NavLink>
-          </li>
-          {props.isLoggedIn && (
+        <button className="navbar-toggler"
+         type="button" data-toggle="collapse"
+         data-target="#navbarNav" 
+         aria-controls="navbarNav" 
+         aria-expanded="false" 
+         aria-label="Toggle navigation"
+         >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse"
+         id="navbarNav">
+          <ul className="navbar-nav">
             <li className="nav-item">
-              <NavLink
-                to="/looks"
-                className="nav-link"
-                id="navLink"
-                activeStyle={{ color: "pink" }}
-              >
+              <NavLink to="/login"
+              className="nav-link" 
+              id="navLink" 
+              activeStyle={{color: "pink"}}>
+                Login
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/register" 
+              className="nav-link" 
+              id="navLink" 
+              activeStyle={{color: "pink"}}>
+                Register
+                </NavLink>
+            </li>
+            {props.isLoggedIn && (
+            <li className="nav-item">
+              <NavLink to="/looks" 
+              className="nav-link" 
+              id="navLink" 
+              activeStyle={{color: "pink"}}>
                 Retail
-              </NavLink>
+                </NavLink>
             </li>
-          )}
-          {props.isLoggedIn && (
+            )}
+            {props.isLoggedIn && (
             <li className="nav-item">
-              <NavLink
-                to="/foodcourt"
-                className="nav-link"
-                id="navLink"
-                activeStyle={{ color: "pink" }}
-              >
+              <NavLink to="/foodcourt" 
+              className="nav-link" 
+              id="navLink" 
+              activeStyle={{color: "pink"}}>
                 Food Court
-              </NavLink>
+                </NavLink>
             </li>
-          )}
-        </ul>
-      </div>
-    </nav>
-  );
+            )}
+          </ul>
+        </div>
+      </nav>
+    );
 };
 
 export default NavBar;

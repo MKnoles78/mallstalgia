@@ -4,7 +4,7 @@ import FoodInput from "./FoodInput"
 
 
 
-function FoodcourtForm (props){
+export function FoodcourtForm (props){
 
         // Notice how each input has a `value`, `name`, and `onChange` prop
         return (

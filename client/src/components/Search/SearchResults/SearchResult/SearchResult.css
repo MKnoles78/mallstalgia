@@ -1,0 +1,31 @@
+.result {
+    display: flex;
+    margin-top: 1rem;
+    max-width: 1000px;
+    width: 80%;
+}
+
+.business-image {
+    width: 210px;
+    height: 210px;
+    border-radius: 4px;
+    margin-right: 1rem;
+}
+
+.btn-sm {
+    height: 20px;
+    width: 65px;
+    text-align: center;
+    line-height: 10px;
+    
+}
+
+.business-info{
+    min-width: 400px;
+}
+
+.contact-info p {
+    font-size: .85rem;
+    margin-bottom: 1px;
+
+}

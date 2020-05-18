@@ -1,0 +1,24 @@
+
+.outer-foodinput {
+    justify-content: center;
+    width: 100%;
+    margin-bottom: -15px;
+}
+#foodinput {
+    width: 100%;
+    align-items: center;
+    
+}
+
+#button-addon1 {    
+    background-color: #d9f28b ;
+}
+
+.fa-search {
+    width: 38px;
+    height: 38px;
+    fill: grey;
+    background-color: #d9f28b;
+    padding: 11px;
+    
+}

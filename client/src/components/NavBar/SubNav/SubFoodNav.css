@@ -1,0 +1,10 @@
+.subNav {
+    display: flex;
+    background-color: #3e75cc;
+    padding: 0 3em;
+    justify-content: center;
+    
+}
+.review-button {
+    width: auto;
+}
