@@ -98,7 +98,7 @@ function App() {
 
           {/* <PrivateRoute path="/looks/:id" render={(props) => <Retailer {...props} />} /> */}
           
-          {/* <Route
+          <Route
             path={["/looks"]}
             render={(props) => <Looks {...props} isLoggedIn={isLoggedIn} />}
           />
@@ -109,7 +109,7 @@ function App() {
           <Route
             path={["/foodcourtlanding"]}
             render={(props) => <FoodcourtLanding {...props} />}
-          />   */}
+          />  
         </Switch>
       </Router>
     </>
