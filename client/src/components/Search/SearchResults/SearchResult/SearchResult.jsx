@@ -22,7 +22,7 @@ export function SearchResult (props) {
             </div>
             <div className="contact-info">
             <div>
-            <p><h3><small className="text-muted">{props.business.location.display_address}</small></h3><h4><small className="text-muted">{props.business.display_phone}</small></h4></p>
+            <p><h4><small className="text-muted">{props.business.location.display_address}</small></h4><h4><small className="text-muted">{props.business.display_phone}</small></h4></p>
             </div>
             </div>
         </div>
