@@ -72,7 +72,7 @@ function App() {
            <Route
             path="/register"
             render={(props) => (
-              <Register {...props} checkForToken={checkForToken} />
+              <Register {...props} />
             )}
             />
             <Route 
