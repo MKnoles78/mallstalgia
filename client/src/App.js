@@ -12,6 +12,8 @@ import NotFound from "./containers/NotFound";
 import FoodcourtLanding from "./containers/FoodcourtLanding";
 import Search from "./components/Search/Search";
 
+console.log(process.env.REACT_APP_BEARER_TOKEN )
+
 function App() {
   const [userObject, setUserObject] = useState({});
   const [isLoggedIn, setIsLoggedIn] = useState(false);
