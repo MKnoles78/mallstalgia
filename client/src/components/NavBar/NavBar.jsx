@@ -24,7 +24,7 @@ const NavBar = (props) => {
               <NavLink to="/looks" className="nav-link" id="navLink" activeStyle={{color: "pink"}}>Retail</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/foodcourt" className="nav-link" id="navLink" activeStyle={{color: "pink"}}>Food Court</NavLink>
+              <NavLink to="/foodcourtlanding" className="nav-link" id="navLink" activeStyle={{color: "pink"}}>Food Court</NavLink>
             </li>
           </ul>
         </div>

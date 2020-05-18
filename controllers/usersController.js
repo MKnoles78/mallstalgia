@@ -12,7 +12,7 @@ router.post("/", (req, res) => {
   const zipcode = req.body.zipcode ? req.body.zipcode.trim() : "";
 
   if (fname && lname && email && username && password && zipcode) {
-    db.User.create({ username, password, email, fname, lname, zipcode })
+    db.User.create({ fname, lname, email, username, password, zipcode })
       .then(async (newUser) => {
         const token = await jwt.sign(
           {

@@ -9,15 +9,6 @@ export function SubFoodNav() {
             <SubNavComp lable="Home Services" icon="fa-house-user"/>
             <SubNavComp lable="Auto Services" icon="fa-car"/>
             <SubNavComp lable="More" icon="fa-info-circle"/>
-            <button className="review-button">
-                <span className="icon"><i className="fas fa-pen"/></span>
-                <span>Write a Review</span> 
-            </button>  
-            <button className="review-button">
-                <span className="icon"><i className="fas fa-store"/></span>
-                <span>For Businesses</span> 
-            </button> 
-
         </div>
     );
 };

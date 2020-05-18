@@ -4,7 +4,7 @@ body, html {
 
 .bg {
   /* The image used */
-  background-image: url(“../images/main.jpeg”);
+  background-color: #FFA3E8;
   /* Full height */
   height: 100%;
   /* Center and scale the image nicely */

@@ -80,10 +80,6 @@ function App() {
                 <Looks />
             </Route>
             <Route 
-                path="/foodcourt">
-                <Foodcourt />
-            </Route>
-            <Route 
                 path="/foodcourtlanding">
                 <FoodcourtLanding />
             </Route>
@@ -96,9 +92,9 @@ function App() {
                 <NotFound />
           </Route>
 
-          {/* <PrivateRoute path="/looks/:id" render={(props) => <Retailer {...props} />} />
+          {/* <PrivateRoute path="/looks/:id" render={(props) => <Retailer {...props} />} /> */}
           
-          <Route
+          {/* <Route
             path={["/looks"]}
             render={(props) => <Looks {...props} />}
           />
@@ -107,11 +103,11 @@ function App() {
             render={(props) => <Retailer {...props} />}
           />
           <Route
-            path={["/foodcourt"]}
-            render={(props) => <Foodcourt {...props} />}
-          />  
+            path={["/foodcourtlanding"]}
+            render={(props) => <FoodcourtLanding {...props} />}
+          />   */}
           
-          */}
+         
 
 
         </Switch>

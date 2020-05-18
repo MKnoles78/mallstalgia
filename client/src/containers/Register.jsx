@@ -27,11 +27,11 @@ class Register extends Component {
   handleSubmit = (event, username, password, email, fname, lname, zipcode) => {
     event.preventDefault();
     Axios.post("/api/user", {
-      username,
-      password,
-      email,
       fname,
       lname,
+      email,
+      username,
+      password,
       zipcode,
     })
       .then(async (response) => {
@@ -56,13 +56,12 @@ class Register extends Component {
 
   render() {
     return (
-      <>
-        <div className="container">
+        <div className="container" id="register-background">
           <div className="row">
             <div className="col-sm-4"></div>
             <div className="col-sm-4">
-              <div className="card">
-                <div className="card-body">
+              <div className="card" >
+                <div className="card-body" id="createform">
                   <h3>Create an account</h3>
                   <Form handleSubmit={this.handleSubmit} />
                 </div>
@@ -71,7 +70,6 @@ class Register extends Component {
             <div className="col-sm-4"></div>
           </div>
         </div>
-      </>
     );
   }
 }
