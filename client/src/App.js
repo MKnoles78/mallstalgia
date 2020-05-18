@@ -103,10 +103,6 @@ function App() {
             render={(props) => <Looks {...props} isLoggedIn={isLoggedIn} />}
           />
           <Route
-            path={["/retailer"]}
-            render={(props) => <Retailer {...props} isLoggedIn={isLoggedIn} />}
-          />
-          <Route
             path={["/foodcourtlanding"]}
             render={(props) => <FoodcourtLanding {...props} />}
           />  
