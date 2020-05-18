@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import Axios from "axios";
+import axios from "axios";
 import "./Register.css";
 import Form from "../components/Register/Form";
-import jwt from "jsonwebtoken";
+require("dotenv").config();
+const jwt = require("jsonwebtoken");
 
 class Register extends Component {
   state = {
@@ -24,9 +25,9 @@ class Register extends Component {
     });
   };
 
-  handleSubmit = (event, username, password, email, fname, lname, zipcode) => {
+  handleSubmit = (event, fname, lname, email, username, password, zipcode) => {
     event.preventDefault();
-    Axios.post("/api/user", {
+    axios.post("/api/user", {
       fname,
       lname,
       email,
@@ -43,7 +44,6 @@ class Register extends Component {
           );
           console.log(decoded);
           sessionStorage.setItem("jwt", response.data.data);
-          await this.props.checkForToken();
           await this.props.history.push(`/looks/${decoded.id}`);
         }
       })
@@ -73,5 +73,4 @@ class Register extends Component {
     );
   }
 }
-
 export default Register;
