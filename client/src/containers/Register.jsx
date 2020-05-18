@@ -40,7 +40,7 @@ class Register extends Component {
         if (response.data.success) {
           const decoded = await jwt.verify(
             response.data.data,
-            "carolbaskinkilledherhusband"
+            process.env.REACT_APP_SECRET_KEY
           );
           console.log(decoded);
           sessionStorage.setItem("jwt", response.data.data);

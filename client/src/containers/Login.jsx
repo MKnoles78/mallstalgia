@@ -36,7 +36,7 @@ class Login extends Component {
         if (response.data.success) {
           const decoded = jwt.verify(
             response.data.data,
-            "carolbaskinkilledherhusband"
+            process.env.REACT_APP_SECRET_KEY
           );
           console.log(decoded);
           await sessionStorage.setItem("jwt", response.data.data);

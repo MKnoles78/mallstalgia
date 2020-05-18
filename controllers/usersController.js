@@ -20,7 +20,7 @@ router.post("/", (req, res) => {
             id: newUser.id,
             exp: Math.floor(Date.now() / 1000) + 60 * 60,
           },
-          "carolbaskinkilledherhusband"
+          process.env.REACT_APP_SECRET_KEY
         );
         console.log(token);
         await res.json({
