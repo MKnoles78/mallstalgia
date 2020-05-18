@@ -52,7 +52,7 @@ class Login extends Component {
 
   render() {
     return (
-      <>
+      <div className="login-background">
         <div className="container">
           {this.state.error && (
             <div
@@ -93,7 +93,7 @@ class Login extends Component {
             <div className="col-sm-4"></div>
           </div>
         </div>
-      </>
+      </div>
     );
   }
 }

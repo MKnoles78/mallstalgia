@@ -84,7 +84,6 @@ class Looks extends Component {
                           {this.renderTable(0)}
                         </div>
                         <div className="row">
-                          {this.renderTable(1)}
                         </div>
                         </div>
                         <div className="col-sm-9">

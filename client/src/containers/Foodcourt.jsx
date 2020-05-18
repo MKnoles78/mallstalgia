@@ -11,7 +11,7 @@ class Foodcourt extends Component {
   state = {};
 
   componentDidMount() {
-    this.searchYelp("");
+    // this.searchYelp("");
 
 };
 

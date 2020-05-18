@@ -22,10 +22,27 @@
 
 .business-info{
     min-width: 400px;
+    font-size: .85rem;
+    margin-bottom: 1px;
+    width: 210px;
+    height: 210px;
+    background-color: #D9F28C;
+    border-radius: 4px 0px 0px 4px;
+    padding-left: 10px;
 }
 
 .contact-info p {
     font-size: .85rem;
     margin-bottom: 1px;
+    width: 210px;
+    height: 210px;
+    background-color: #D9F28C;
+    border-radius: 0px 4px 4px 0px;
+    padding-right: 10px;
 
+}
+
+h5 {
+    text-align: center;
+    
 }

@@ -12,13 +12,16 @@
     background-color: #3e75cc;
     padding: 1rem 0;
     justify-content: center;
+    align-items: center;
     
 }
+
 
 .searchComponents {
     display: flex;
     width: 90%;
     align-items: center;
+    justify-content: center;
     
     
 }
@@ -28,4 +31,8 @@
     width: 10em;
     margin-left: 1em;
     margin-left: 1em;
+}
+
+.form-control {
+    border: none;
 }

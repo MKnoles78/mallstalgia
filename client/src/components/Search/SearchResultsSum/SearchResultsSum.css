@@ -11,10 +11,11 @@
 
 .container-search {
     display: flex;
-    background-color: #F2F3F4;
+    background-color: #D9F28C;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+
 
 }
 

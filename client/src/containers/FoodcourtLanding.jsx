@@ -1,6 +1,5 @@
 import React from "react";
-import TopNav from "../components/FoodCourtLanding/TopNav";
-import icon from "../images/Icon.png"
+import icon from "../images/LogoRound.png"
 import "./FoodcourtLanding.css"
 import FoodcourtSearch from "../components/FoodcourtSearch/FoodcourtSearch";
 import FoodSuggestion from "../components/FoodSuggestion/FoodSuggestion";
@@ -18,12 +17,14 @@ export function FoodcourtLanding (){
 
     }
     return (
+    <div className="foodcourt-background">
     <div className="landing">
     <div className="search-food">
-       <TopNav/>
        <img src={icon} className="icon" alt="logo"/>
+       <div id="suggestions"><FoodSuggestion /></div>
        <FoodcourtSearch search={search}/>
-       <FoodSuggestion />
+      
+    </div>
     </div>
     </div>
     )

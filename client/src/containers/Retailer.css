@@ -1,9 +1,10 @@
 body {
     height: 100%;
-    background: url(../images/main.jpeg);
+    background-color: #FFA3E8;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 
 .login-background {
     height: 100%;

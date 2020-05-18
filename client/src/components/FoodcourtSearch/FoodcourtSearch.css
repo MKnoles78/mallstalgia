@@ -5,14 +5,18 @@
     margin-bottom: -15px;
 }
 #foodinput {
-    width: 100%;
+    width: 110%;
     align-items: center;
+    margin: 0px;
     
 }
 
 #button-addon1 {    
     background-color: #d9f28b ;
+    border: none;
+    height: 38px;
 }
+
 
 .fa-search {
     width: 38px;

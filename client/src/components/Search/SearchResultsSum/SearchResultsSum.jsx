@@ -8,12 +8,14 @@ export function SearchResultsSum (props) {
         resultStats = <p>Showing 1-{props.shownResults} out of {props.amountResults} results</p>
     }
     return (
+        
         <div className="container-search">
         <div className="search-summary">
-        <h3>{props.term}<small className="text-muted">{props.location}</small></h3>
+        <h3>{props.location}: <small className="text-muted">{props.term}</small></h3>
             {resultStats}
         </div>
-        <div className="filters"> 
+        {/* /// REVISIT FOR FUTURE DEVELOPMENT */}
+        {/* <div className="filters"> 
         <button className="btn btn-secondary">
             <span className="icon"><i className="fas fa-sliders-h"/></span>
             <span>All Filters</span> 
@@ -32,7 +34,7 @@ export function SearchResultsSum (props) {
                 <span className="icon"><i className="fas fa-dollar-sign"/></span>
                 <span>Cashback</span> 
         </button> 
-        </div>
+        </div> */}
         </div>
     );
 };

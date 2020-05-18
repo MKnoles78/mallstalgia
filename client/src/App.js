@@ -6,11 +6,13 @@ import Foodcourt from "./containers/Foodcourt";
 import Looks from "./containers/Looks";
 import Register from "./containers/Register";
 import Login from "./containers/Login";
-import Retailer from "./containers/Retailer";
+// import Retailer from "./containers/Retailer";
 import NavBar from "./components/NavBar/NavBar";
 import NotFound from "./containers/NotFound";
 //import FoodcourtLanding from "./containers/FoodcourtLanding";
 //import Search from "./components/Search/Search";
+
+
 
 function App() {
   const [userObject, setUserObject] = useState({});
@@ -76,8 +78,27 @@ function App() {
             render={(props) => (
               <Register {...props}/>
             )}
-          />
-          <Route
+            />
+            <Route 
+                path="/looks">
+                <Looks />
+            </Route>
+            <Route 
+                path="/foodcourtlanding">
+                <FoodcourtLanding />
+            </Route>
+            <Route 
+                path="/search">
+                <Search />
+            </Route>
+            <Route 
+                path="*">
+                <NotFound />
+          </Route>
+
+          {/* <PrivateRoute path="/looks/:id" render={(props) => <Retailer {...props} />} /> */}
+          
+          {/* <Route
             path={["/looks"]}
             render={(props) => <Looks {...props} isLoggedIn={isLoggedIn} />}
           />
@@ -86,12 +107,9 @@ function App() {
             render={(props) => <Retailer {...props} isLoggedIn={isLoggedIn} />}
           />
           <Route
-            path={["/foodcourt"]}
-            render={(props) => <Foodcourt {...props} isLoggedIn={isLoggedIn} />}
-          />
-          <Route path={["*"]}>
-            <NotFound />
-          </Route>
+            path={["/foodcourtlanding"]}
+            render={(props) => <FoodcourtLanding {...props} />}
+          />   */}
         </Switch>
       </Router>
     </>

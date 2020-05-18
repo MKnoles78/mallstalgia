@@ -53,12 +53,7 @@ const NavBar = (props) => {
             )}
             {props.isLoggedIn && (
             <li className="nav-item">
-              <NavLink to="/foodcourt" 
-              className="nav-link" 
-              id="navLink" 
-              activeStyle={{color: "pink"}}>
-                Food Court
-                </NavLink>
+              <NavLink to="/foodcourtlanding" className="nav-link" id="navLink" activeStyle={{color: "pink"}}>Food Court</NavLink>
             </li>
             )}
           </ul>

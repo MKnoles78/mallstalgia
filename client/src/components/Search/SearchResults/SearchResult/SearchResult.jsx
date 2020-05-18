@@ -12,18 +12,18 @@ export function SearchResult (props) {
     return (
         <div>
         <div className="result">
-            <img src={props.business.image_url} alt="business" className="business-image"/>
+            <a href={props.business.url}>
+            <img src={props.business.image_url} alt="business" className="business-image"/></a>
             <div className="business-info">
             <h2><small className="text-muted">{props.business.name}</small></h2>
             <h4><small className="text-muted">Rating {props.business.rating} Stars</small></h4>
             <h4><small className="text-muted">{props.business.review_count} Reviews</small></h4>
-            <p><small className="text-muted">{props.business.price}</small></p>
+            <h4><small className="text-muted">{props.business.price} Price</small></h4>
             </div>
             <div className="contact-info">
-            <p>{props.business.display_phone}</p>
-            <p>{props.business.location.display_address}</p>
-
-
+            <div>
+            <p><h3><small className="text-muted">{props.business.location.display_address}</small></h3><h4><small className="text-muted">{props.business.display_phone}</small></h4></p>
+            </div>
             </div>
         </div>
         </div>
