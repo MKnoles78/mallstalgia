@@ -6,13 +6,13 @@ import Foodcourt from "./containers/Foodcourt";
 import Looks from "./containers/Looks";
 import Register from "./containers/Register";
 import Login from "./containers/Login";
-import Retailer from "./containers/Retailer";
+// import Retailer from "./containers/Retailer";
 import NavBar from "./components/NavBar/NavBar";
 import NotFound from "./containers/NotFound";
 import FoodcourtLanding from "./containers/FoodcourtLanding";
 import Search from "./components/Search/Search";
 
-console.log(process.env.REACT_APP_BEARER_TOKEN )
+
 
 function App() {
   const [userObject, setUserObject] = useState({});
