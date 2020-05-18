@@ -9,8 +9,8 @@ import Login from "./containers/Login";
 import Retailer from "./containers/Retailer";
 import NavBar from "./components/NavBar/NavBar";
 import NotFound from "./containers/NotFound";
-import FoodcourtLanding from "./containers/FoodcourtLanding";
-import Search from "./components/Search/Search";
+//import FoodcourtLanding from "./containers/FoodcourtLanding";
+//import Search from "./components/Search/Search";
 
 function App() {
   const [userObject, setUserObject] = useState({});
@@ -63,6 +63,7 @@ function App() {
           <Route
             path="/login"
             render={(props) => (
+
               <Login
                 {...props}
                 setIsLoggedIn={setIsLoggedIn}

@@ -1,12 +1,17 @@
-import React from 'react';
+import React from "react";
 import "./NavBar.css";
-import { NavLink } from "react-router-dom";  
+import { NavLink } from "react-router-dom";
 import icon from "../../images/Icon.png";
 
 const NavBar = (props) => {
-    return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light" id="navbarMain">
-          <NavLink to="/" className="nav-link" id="navLink" ><img src={icon} className="icon" id="icon" alt=""/></NavLink>
+  return (
+    <nav
+      className="navbar navbar-expand-lg navbar-light bg-light"
+      id="navbarMain"
+    >
+      <NavLink to="/" className="nav-link" id="navLink">
+        <img src={icon} className="icon" id="icon" alt="" />
+      </NavLink>
 
         <button className="navbar-toggler"
          type="button" data-toggle="collapse"
