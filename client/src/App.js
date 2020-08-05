@@ -9,8 +9,8 @@ import Login from "./containers/Login";
 // import Retailer from "./containers/Retailer";
 import NavBar from "./components/NavBar/NavBar";
 import NotFound from "./containers/NotFound";
-//import FoodcourtLanding from "./containers/FoodcourtLanding";
-//import Search from "./components/Search/Search";
+import FoodcourtLanding from "./containers/FoodcourtLanding";
+import Search from "./components/Search/Search";
 
 
 
@@ -98,18 +98,14 @@ function App() {
 
           {/* <PrivateRoute path="/looks/:id" render={(props) => <Retailer {...props} />} /> */}
           
-          {/* <Route
+          <Route
             path={["/looks"]}
             render={(props) => <Looks {...props} isLoggedIn={isLoggedIn} />}
           />
           <Route
-            path={["/retailer"]}
-            render={(props) => <Retailer {...props} isLoggedIn={isLoggedIn} />}
-          />
-          <Route
             path={["/foodcourtlanding"]}
             render={(props) => <FoodcourtLanding {...props} />}
-          />   */}
+          />  
         </Switch>
       </Router>
     </>
