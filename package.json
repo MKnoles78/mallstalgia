@@ -29,7 +29,7 @@
   "dependencies": {
     "@apollo/react-hooks": "^3.1.5",
     "apollo-boost": "^0.4.9",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bootstrap-icons": "^1.0.0-alpha3",
     "concurrently": "^5.2.0",
     "dotenv": "^8.2.0",
